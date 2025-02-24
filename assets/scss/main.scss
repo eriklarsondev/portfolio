@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply overflow-x-hidden leading-6 bg-black font-sans font-light text-zinc-400;
+}
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-5 leading-loose font-serif font-light text-zinc-200;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-base;
+}
+
+h5 {
+  @apply text-sm;
+}
+
+h6 {
+  @apply text-xs;
+}
+
+p {
+  @apply mb-5;
+}
+
+strong {
+  @apply font-normal;
+}
+
+hr {
+  @apply my-8 border-t-2 border-zinc-900 rounded-full;
+}
+
+::selection {
+  @apply bg-yellow-300 text-black;
+}
