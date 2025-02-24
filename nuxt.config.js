@@ -21,7 +21,13 @@ export default defineNuxtConfig({
   },
   buildDir: 'nuxt-dist',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  fontawesome: {
+    icons: {
+      solid: ['triangle-exclamation'],
+      brands: ['x-twitter', 'github', 'linkedin']
+    }
+  },
+  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
   runtimeConfig: {
     apiToken: process.env.API_TOKEN,
     basePath: process.env.BASE_PATH
