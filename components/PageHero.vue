@@ -4,6 +4,8 @@
       <div v-if="data">
         <Subheading :label="data.name" class="[&]:mb-1" />
         <Heading :label="data.headline" class="[&]:m-0" />
+
+        <UtilityMenu :items="data.controls" class="mt-10" v-if="data.controls && data.controls.length" />
       </div>
 
       <Error v-if="!data">{{ props.slug }} was not found</Error>
