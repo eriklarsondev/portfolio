@@ -1,8 +1,12 @@
 <template>
-  <div class="callout relative ml-3 sm:p-5 p-4 bg-zinc-900">
+  <div :class="['callout relative sm:ml-3 sm:p-5 p-4', { 'bg-zinc-900': !props.dark, 'dark bg-zinc-950': props.dark }]">
     <slot />
   </div>
 </template>
+
+<script setup>
+const props = defineProps(['dark'])
+</script>
 
 <style lang="scss">
 .callout {
@@ -12,15 +16,19 @@
   }
 
   &::before {
-    @apply top-0 -left-3 w-1 h-full bg-accent rounded-l-full;
+    @apply top-0 sm:-left-3 left-0 w-1 h-full bg-accent rounded-l-full;
   }
 
   &::after {
-    @apply bottom-0 right-0 border-t-[40px] border-r-[40px] border-t-transparent border-r-black;
+    @apply bottom-0 right-0 sm:border-t-[40px] border-t-[30px] sm:border-r-[40px] border-r-[30px] border-t-transparent border-r-black;
   }
 
   p {
-    @apply leading-6 sm:text-[14.5px] text-[14px];
+    @apply leading-6 sm:text-[14.5px] text-[13.5px];
+  }
+
+  &.dark::after {
+    @apply border-r-zinc-900;
   }
 }
 </style>

@@ -23,14 +23,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   fontawesome: {
     icons: {
-      solid: ['triangle-exclamation'],
+      solid: ['paper-plane', 'terminal', 'triangle-exclamation'],
       brands: ['x-twitter', 'github', 'linkedin']
     }
   },
   modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
   runtimeConfig: {
     apiToken: process.env.API_TOKEN,
-    basePath: process.env.BASE_PATH
+    basePath: process.env.BASE_PATH,
+    public: {
+      calendlyPath: process.env.CALENDLY_PATH
+    }
   },
   ssr: false,
   tailwindcss: {
