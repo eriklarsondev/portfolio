@@ -6,7 +6,9 @@
       <Services />
 
       <div class="max-w-3xl mx-auto">
-        <Content slug="working-together" />
+        <Callout>
+          <Content slug="working-together" />
+        </Callout>
       </div>
     </div>
   </div>

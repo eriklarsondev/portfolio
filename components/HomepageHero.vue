@@ -6,7 +6,21 @@
         <ListGroup :items="['Node.js', 'Vue', 'WordPress', 'Strapi']" class="mb-5" />
 
         <TypedHeading slug="homepage-hero" class="mb-3" />
-        <Content slug="homepage-hero" />
+        <Callout>
+          <Content slug="homepage-hero" />
+        </Callout>
+
+        <div class="flex items-center sm:gap-8 gap-5 mt-8">
+          <div>
+            <Button label="Let's connect" url="/contact" />
+          </div>
+
+          <div>|</div>
+
+          <div>
+            <SocialMediaBar />
+          </div>
+        </div>
       </div>
     </div>
   </div>

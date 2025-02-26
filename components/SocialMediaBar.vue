@@ -4,8 +4,8 @@
       <li
         v-for="(item, index) in data.items"
         :key="index"
-        :class="['inline-block', { 'mr-7': index < data.items.length - 1 }]">
-        <a :href="item.url" :target="!item.newTab ? '_self' : '_blank'" class="text-2xl text-zinc-200">
+        :class="['inline-block', { 'sm:mr-7 mr-6': index < data.items.length - 1 }]">
+        <a :href="item.url" :target="!item.newTab ? '_self' : '_blank'" class="sm:text-2xl text-xl text-zinc-200">
           <font-awesome :icon="['fab', item.label]" />
         </a>
       </li>
