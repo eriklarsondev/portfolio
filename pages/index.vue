@@ -9,6 +9,8 @@
 
     <Slanted>
       <div class="max-w-5xl mx-auto">
+        <TypedHeading slug="tech-expert" :once="true" class="mb-3" />
+
         <div class="max-w-3xl mb-8">
           <Callout :dark="true">
             <Content slug="tech-expert" />

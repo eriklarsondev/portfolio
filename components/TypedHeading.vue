@@ -13,13 +13,13 @@
 <script setup>
 import { Typed } from '@duskmoon/vue3-typed-js'
 
-const props = defineProps(['slug'])
+const props = defineProps(['slug', 'once'])
 
 const { data } = await useFetch(`/api/typed/${props.slug}`)
 
 const config = {
   strings: data.value ? data.value.items : [],
-  loop: true,
+  loop: !props.once ? true : false,
   showCursor: false,
   typeSpeed: 100
 }
