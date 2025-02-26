@@ -1,0 +1,32 @@
+<template>
+  <div>
+    <div class="content-block" v-if="data">
+      <div class="sm:leading-7 leading-6 sm:text-base text-[14px]" v-html="data.content"></div>
+    </div>
+
+    <Error v-if="!data">{{ props.slug }} was not found</Error>
+  </div>
+</template>
+
+<script setup>
+const props = defineProps(['slug'])
+
+const { data } = await useFetch(`/api/content/${props.slug}`)
+</script>
+
+<style lang="scss">
+.content-block {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-1 uppercase tracking-widest font-sans font-medium text-xs text-accent;
+  }
+
+  p:last-of-type {
+    @apply mb-0;
+  }
+}
+</style>
