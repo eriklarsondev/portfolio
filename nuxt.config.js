@@ -32,7 +32,8 @@ export default defineNuxtConfig({
     apiToken: process.env.API_TOKEN,
     basePath: process.env.BASE_PATH,
     public: {
-      calendlyPath: process.env.CALENDLY_PATH
+      calendlyPath: process.env.CALENDLY_PATH,
+      githubPath: process.env.GITHUB_PATH
     }
   },
   ssr: false,

@@ -24,7 +24,7 @@ const props = defineProps(['dark'])
   }
 
   p {
-    @apply leading-6 sm:text-[14.5px] text-[13.5px];
+    @apply lg:leading-loose leading-normal font-serif sm:text-[15px] text-[13.5px] text-zinc-200;
   }
 
   &.dark::after {

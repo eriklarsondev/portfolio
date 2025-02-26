@@ -22,7 +22,7 @@ const { data } = await useFetch(`/api/content/${props.slug}`)
   h4,
   h5,
   h6 {
-    @apply mb-1 uppercase tracking-widest font-sans font-medium text-xs text-accent;
+    @apply mb-1 uppercase tracking-widest font-sans font-medium text-sm text-accent;
   }
 
   p:last-of-type {

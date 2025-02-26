@@ -1,7 +1,7 @@
 <template>
   <h4
     :class="[
-      'inline-flex mb-2 uppercase tracking-widest font-sans font-medium text-xs',
+      'mb-2 uppercase tracking-widest font-sans font-medium text-xs',
       { 'text-accent': !props.muted, 'text-zinc-500': props.muted }
     ]">
     <div class="mr-1" v-if="slots.icon">
