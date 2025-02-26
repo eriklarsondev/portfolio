@@ -3,8 +3,10 @@
     <div class="container relative max-w-[1260px]">
       <div class="max-w-3xl">
         <Subheading label="Technical focus" />
+        <ListGroup :items="['Node.js', 'Vue', 'WordPress', 'Strapi']" class="mb-5" />
 
-        <TypedHeading slug="lsldl" />
+        <TypedHeading slug="homepage-hero" class="mb-3" />
+        <Content slug="homepage-hero" />
       </div>
     </div>
   </div>
