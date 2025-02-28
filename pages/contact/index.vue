@@ -6,7 +6,7 @@
       <Services />
     </div>
 
-    <Slanted>
+    <SlantedContainer>
       <div class="max-w-3xl mx-auto">
         <Callout :dark="true" class="mb-8">
           <Content slug="working-together" />
@@ -14,7 +14,7 @@
 
         <ContactForm :dark="true" />
       </div>
-    </Slanted>
+    </SlantedContainer>
 
     <div class="container max-w-[1260px]">
       <CalendlyEmbed />

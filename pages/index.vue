@@ -7,7 +7,7 @@
       <Services />
     </div>
 
-    <Slanted>
+    <SlantedContainer>
       <div class="max-w-5xl mx-auto">
         <div class="max-w-3xl mb-8">
           <Heading label="Technology expert" class="[&]:mb-3" />
@@ -19,7 +19,7 @@
 
         <Technologies />
       </div>
-    </Slanted>
+    </SlantedContainer>
 
     <div class="container max-w-[1260px]">
       <Heading label="Open-source advocate" class="text-center" />
