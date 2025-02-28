@@ -4,7 +4,10 @@
 
     <div class="container max-w-[1260px]">
       <Heading label="Let's build something great" class="text-center" />
-      <Services />
+
+      <LinkContainer label="Let's Work Together" url="/services">
+        <Services />
+      </LinkContainer>
     </div>
 
     <SlantedContainer>
@@ -23,7 +26,10 @@
 
     <div class="container max-w-[1260px]">
       <Heading label="Open-source advocate" class="text-center" />
-      <GithubRepos />
+
+      <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
+        <GithubRepos />
+      </LinkContainer>
     </div>
   </div>
 </template>

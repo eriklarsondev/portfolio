@@ -1,5 +1,5 @@
 <template>
-  <div class="grid md:grid-cols-5 grid-cols-3 lg:gap-5 gap-3">
+  <div class="grid md:grid-cols-5 grid-cols-3 lg:gap-5 sm:gap-3 gap-2">
     <div
       v-for="(item, index) in data"
       :key="index"
