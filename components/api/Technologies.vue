@@ -3,7 +3,7 @@
     <div
       v-for="(item, index) in data"
       :key="index"
-      class="tech relative lg:py-10 md:py-7 sm:py-10 py-5 px-5 text-center bg-zinc-950">
+      class="tech relative lg:py-10 md:py-7 sm:py-10 py-5 px-5 text-center bg-zinc-900">
       <i :class="['lg:text-5xl md:text-4xl sm:text-5xl text-4xl text-accent', item.icon]"></i>
       <Subheading :label="item.name" :muted="true" class="mt-1 [&]:mb-0 [&]:text-[11px]" />
     </div>
@@ -22,11 +22,11 @@ const { data } = await useFetch('/api/technologies')
   }
 
   &::before {
-    @apply top-0 left-0 border-b-[20px] border-l-[20px] border-b-transparent border-l-zinc-900;
+    @apply top-0 left-0 border-b-[20px] border-l-[20px] border-b-transparent border-l-zinc-950;
   }
 
   &::after {
-    @apply bottom-0 right-0 lg:border-t-[40px] border-t-[20px] lg:border-r-[40px] border-r-[20px] border-t-transparent border-r-zinc-900;
+    @apply bottom-0 right-0 lg:border-t-[40px] border-t-[20px] lg:border-r-[40px] border-r-[20px] border-t-transparent border-r-zinc-950;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submit()" :class="{ dark: props.dark }">
+  <form @submit.prevent="submit()">
     <div class="flex sm:flex-row flex-col gap-5 mb-5">
       <div class="flex-1">
         <label>Full Name</label>
@@ -35,8 +35,6 @@
 </template>
 
 <script setup>
-const props = defineProps(['dark'])
-
 const fields = ref({ fullName: null, email: null, websiteUrl: null, message: null })
 
 async function submit() {
@@ -62,12 +60,5 @@ textarea {
 
 textarea {
   @apply h-[300px] py-4 resize-none;
-}
-
-form.dark {
-  input,
-  textarea {
-    @apply bg-zinc-950 focus:bg-accent/20;
-  }
 }
 </style>

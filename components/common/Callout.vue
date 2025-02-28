@@ -1,11 +1,11 @@
 <template>
-  <div :class="['callout relative sm:ml-3 sm:p-5 p-4', { 'bg-zinc-900': !props.dark, 'dark bg-zinc-950': props.dark }]">
+  <div :class="['callout relative sm:ml-3 sm:p-5 p-4 bg-zinc-900', { alternate: props.alternate }]">
     <slot />
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['dark'])
+const props = defineProps(['alternate'])
 </script>
 
 <style lang="scss">
@@ -24,11 +24,11 @@ const props = defineProps(['dark'])
   }
 
   p {
-    @apply lg:leading-loose leading-normal font-serif sm:text-[15px] text-[13.5px] text-zinc-200;
+    @apply leading-normal font-serif sm:text-[15px] text-[13.5px] text-zinc-200;
   }
 
-  &.dark::after {
-    @apply border-r-zinc-900;
+  &.alternate::after {
+    @apply border-r-zinc-950;
   }
 }
 </style>

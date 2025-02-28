@@ -8,11 +8,11 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Callout :dark="true" class="mb-8">
+        <Callout :alternate="true" class="mb-8">
           <Content slug="working-together" />
         </Callout>
 
-        <ContactForm :dark="true" />
+        <ContactForm />
       </div>
     </SlantedContainer>
 

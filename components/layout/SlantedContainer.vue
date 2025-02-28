@@ -10,7 +10,7 @@
 .slanted-container {
   &::before,
   &::after {
-    @apply absolute content-[''] left-0 w-screen h-3/4 bg-zinc-900;
+    @apply absolute content-[''] left-0 w-screen h-3/4 bg-zinc-950;
   }
 
   &::before {

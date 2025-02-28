@@ -12,7 +12,7 @@
         <div class="max-w-3xl mb-8">
           <Heading label="Technology expert" class="[&]:mb-3" />
 
-          <Callout :dark="true">
+          <Callout :alternate="true">
             <Content slug="tech-expert" />
           </Callout>
         </div>
