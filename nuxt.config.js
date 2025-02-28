@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     }
   },
   buildDir: 'nuxt-dist',
+  components: [{ path: '~/components/api' }, { path: '~/components/common' }, { path: '~/components/layout' }],
   devtools: { enabled: true },
   fontawesome: {
     icons: {
