@@ -14,11 +14,11 @@
   }
 
   &::before {
-    @apply top-0 -skew-y-[2deg];
+    @apply top-0 border-t-4 border-zinc-800 -skew-y-[2deg];
   }
 
   &::after {
-    @apply bottom-0 skew-y-[2deg];
+    @apply bottom-0 border-b-4 border-zinc-800 skew-y-[2deg];
   }
 }
 </style>
