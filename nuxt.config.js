@@ -24,11 +24,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   fontawesome: {
     icons: {
-      solid: ['paper-plane', 'terminal', 'triangle-exclamation'],
+      solid: ['building-user', 'location-dot', 'paper-plane', 'terminal', 'triangle-exclamation'],
       brands: ['x-twitter', 'github', 'linkedin']
     }
   },
-  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
   runtimeConfig: {
     apiToken: process.env.API_TOKEN,
     basePath: process.env.BASE_PATH,
@@ -36,6 +36,10 @@ export default defineNuxtConfig({
       calendlyPath: process.env.CALENDLY_PATH,
       githubPath: process.env.GITHUB_PATH
     }
+  },
+  site: {
+    name: 'Erik Larson | Software Engineer',
+    url: 'https://elwebco.com/'
   },
   ssr: false,
   tailwindcss: {

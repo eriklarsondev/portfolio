@@ -8,7 +8,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Drop me a line" />
+        <Heading label="Let's work together" />
 
         <ContactForm />
       </div>

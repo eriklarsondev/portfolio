@@ -1,9 +1,9 @@
 <template>
   <div>
-    <PageHero slug="industry-experience" />
+    <PageHero slug="portfolio" />
 
     <div class="container max-w-[1260px]">
-      <Experience />
+      <GithubRepos />
     </div>
   </div>
 </template>
