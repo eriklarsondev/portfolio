@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHero slug="get-in-touch" />
+    <PageHero slug="web-services" />
 
     <div class="container max-w-[1260px]">
       <Services />
