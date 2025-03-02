@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage-hero relative mb-10 pt-20 pb-10">
+  <div class="homepage-hero relative mb-20 pt-20 pb-10">
     <div class="container relative max-w-[1260px]">
       <div class="max-w-3xl">
         <Subheading label="Technical focus" class="[&]:mb-1">
