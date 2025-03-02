@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   fontawesome: {
     icons: {
-      solid: ['building-user', 'location-dot', 'paper-plane', 'terminal', 'triangle-exclamation'],
+      solid: ['building-user', 'location-dot', 'paper-plane', 'tag', 'terminal', 'triangle-exclamation'],
       brands: ['x-twitter', 'github', 'linkedin']
     }
   },

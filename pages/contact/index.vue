@@ -3,7 +3,9 @@
     <PageHero slug="get-in-touch" />
 
     <div class="container max-w-[1260px]">
-      <Services />
+      <LinkContainer label="Let's work together" url="/services">
+        <Services />
+      </LinkContainer>
     </div>
 
     <SlantedContainer>
