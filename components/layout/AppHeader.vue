@@ -7,6 +7,7 @@
 
           <div>
             <Navbar class="lg:block hidden" />
+            <MobileMenu class="lg:hidden block" />
           </div>
         </div>
       </div>
