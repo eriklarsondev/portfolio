@@ -24,7 +24,7 @@ const props = defineProps(['alternate'])
   }
 
   p {
-    @apply leading-normal font-serif sm:text-[15px] text-[13.5px] text-zinc-200;
+    @apply leading-normal font-serif sm:text-[14.75px] text-[13.5px] text-zinc-200;
   }
 
   p:last-of-type {

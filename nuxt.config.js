@@ -24,11 +24,20 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   fontawesome: {
     icons: {
-      solid: ['building-user', 'location-dot', 'paper-plane', 'tag', 'terminal', 'triangle-exclamation'],
+      solid: [
+        'building-user',
+        'location-dot',
+        'paper-plane',
+        'tag',
+        'terminal',
+        'triangle-exclamation',
+        'quote-left',
+        'quote-right'
+      ],
       brands: ['x-twitter', 'github', 'linkedin']
     }
   },
-  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome', 'vue3-carousel-nuxt'],
   runtimeConfig: {
     apiToken: process.env.API_TOKEN,
     basePath: process.env.BASE_PATH,

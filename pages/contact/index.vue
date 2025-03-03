@@ -6,6 +6,10 @@
       <LinkContainer label="Let's work together" url="/services">
         <Services />
       </LinkContainer>
+
+      <Separator />
+
+      <Testimonials />
     </div>
 
     <SlantedContainer>
