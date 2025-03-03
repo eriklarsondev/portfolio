@@ -35,18 +35,18 @@
             :label="`${item.startYear} - ${item.endYear ? item.endYear : 'Present'} (${item.duration})`"
             :muted="true" />
 
-          <Subheading :label="item.jobTitle" class="[&]:mb-5">
+          <Subheading :label="item.jobTitle" class="[&]:mb-1">
             <template v-slot:icon>
               <font-awesome icon="building-user" />
             </template>
           </Subheading>
 
-          <Subheading label="Technologies" :muted="true" class="[&]:mb-1" />
-          <ListGroup :items="item.technologies" />
-
-          <Callout class="mt-2" v-if="item.content">
+          <div class="mt-1 lg:leading-6 sm:leading-7 leading-6 lg:text-sm sm:text-base text-sm" v-if="item.content">
             <div v-html="item.content"></div>
-          </Callout>
+          </div>
+
+          <Subheading label="Technologies" :muted="true" class="mt-5 [&]:mb-1" />
+          <ListGroup :items="item.technologies" />
         </div>
 
         <div class="flex-1 lg:block hidden"></div>
