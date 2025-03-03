@@ -3,12 +3,12 @@
     <div class="flex sm:flex-row flex-col gap-5 mb-5">
       <div class="flex-1">
         <label>Full Name</label>
-        <input type="text" v-model="fields.fullName" />
+        <input type="text" v-model="fields.fullName" required />
       </div>
 
       <div class="flex-1">
         <label>Email</label>
-        <input type="text" v-model="fields.email" />
+        <input type="text" v-model="fields.email" required />
       </div>
     </div>
 
@@ -44,7 +44,7 @@
     <div class="flex sm:flex-row flex-col gap-5 mb-5">
       <div class="flex-1">
         <label>Message</label>
-        <textarea placeholder="Tell me about your next project" v-model="fields.message"></textarea>
+        <textarea placeholder="Tell me about your next project" v-model="fields.message" required></textarea>
       </div>
     </div>
 
@@ -66,6 +66,9 @@ const { data } = await useFetch('/api/services')
 
 async function submit() {
   try {
+    const payload = await useFetch('/api/leads', {
+      data: fields.value
+    })
   } catch (err) {}
 }
 </script>

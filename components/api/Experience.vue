@@ -44,7 +44,9 @@
             </template>
           </Subheading>
 
-          <div class="mt-1 lg:leading-6 sm:leading-7 leading-6 lg:text-sm sm:text-base text-sm" v-if="item.content">
+          <div
+            class="mt-1 lg:leading-6 sm:leading-7 leading-6 lg:text-sm sm:text-base text-sm text-zinc-300"
+            v-if="item.content">
             <div v-html="item.content"></div>
           </div>
 

@@ -7,7 +7,7 @@
       <div class="relative">
         <font-awesome icon="quote-left" class="absolute -top-20 lg:-left-10 left-0 opacity-20 text-[10rem]" />
 
-        <Carousel v-bind="config" class="">
+        <Carousel v-bind="config" class="relative">
           <Slide v-for="(item, index) in data" :key="index" class="flex-col">
             <div
               class="testimonial relative pl-5 lg:leading-8 md:leading-7 leading-6 font-serif lg:text-xl md:text-base text-sm text-neutral-200"
@@ -22,6 +22,10 @@
               </div>
             </div>
           </Slide>
+
+          <template #addons>
+            <CarouselPagination />
+          </template>
         </Carousel>
 
         <font-awesome icon="quote-right" class="absolute -bottom-5 lg:-right-10 right-0 opacity-20 text-[10rem]" />
@@ -33,6 +37,8 @@
 </template>
 
 <script setup>
+import { Pagination as CarouselPagination } from 'vue3-carousel'
+
 const { data } = await useFetch('/api/testimonials')
 
 const config = {
@@ -52,5 +58,17 @@ const config = {
   p:last-of-type {
     @apply m-0;
   }
+}
+
+.carousel__pagination {
+  @apply items-center -bottom-[50px] h-[50px];
+}
+
+.carousel__pagination-button {
+  @apply w-3 h-3 bg-zinc-700 hover:bg-zinc-600 rounded-full;
+}
+
+.carousel__pagination-button--active {
+  @apply bg-accent hover:bg-accent;
 }
 </style>
