@@ -3,13 +3,13 @@
     <div class="py-20 border-t-4 border-zinc-900">
       <div class="container max-w-[1260px]">
         <div class="flex lg:flex-row flex-col items-center gap-10">
-          <div class="flex-1">
+          <div class="flex-1 lg:order-first order-2">
             <FooterMenu />
           </div>
 
           <div class="flex-1"></div>
 
-          <div class="flex-1">
+          <div class="flex-1 order-last">
             <SocialMediaBar />
           </div>
         </div>

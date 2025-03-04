@@ -3,12 +3,12 @@
     <div class="flex sm:flex-row flex-col gap-5 mb-5">
       <div class="flex-1">
         <label>Full Name</label>
-        <input type="text" v-model="fields.fullName" required />
+        <input type="text" placeholder="John Smith" v-model="fields.fullName" required />
       </div>
 
       <div class="flex-1">
         <label>Email</label>
-        <input type="text" v-model="fields.email" required />
+        <input type="text" placeholder="john@gmail.com" v-model="fields.email" required />
       </div>
     </div>
 
@@ -31,8 +31,8 @@
         <label>Budget / Price Range</label>
         <input type="range" min="500" max="10000" step="500" v-model="fields.budget" />
 
-        <div class="flex items-center mt-2 h-[28px]">
-          <Subheading :label="`$${fields.budget}`" class="[&]:m-0">
+        <div class="flex items-center h-[25px] mt-1">
+          <Subheading :label="`$${fields.budget}`" class="[&]:m-0 [&]:text-zinc-200">
             <template v-slot:icon>
               <font-awesome icon="tag" />
             </template>
@@ -59,16 +59,14 @@
 <script setup>
 const route = useRoute()
 
-const fields = ref({ fullName: null, email: null, websiteUrl: null, services: null, budget: 500, message: null })
+const fields = ref({ fullName: null, email: null, websiteUrl: null, services: null, budget: 5000, message: null })
 const meta = ref({ location: route.path })
 
 const { data } = await useFetch('/api/services')
 
 async function submit() {
   try {
-    const payload = await useFetch('/api/leads', {
-      data: fields.value
-    })
+    const payload = await useFetch('/api/leads', fields)
   } catch (err) {}
 }
 </script>
@@ -81,7 +79,7 @@ label {
 input:not([type='range']),
 select,
 textarea {
-  @apply w-full h-[60px] px-3 bg-zinc-900 text-zinc-200 border-2 border-transparent rounded-none outline-none appearance-none;
+  @apply w-full h-[60px] px-3 bg-zinc-900 text-zinc-200 border-2 border-transparent rounded-sm outline-none appearance-none;
   @apply focus:bg-accent/30 focus:border-accent transition-all duration-300;
 
   &::placeholder {
@@ -90,14 +88,16 @@ textarea {
 }
 
 input[type='range'] {
-  @apply w-full cursor-grab outline-none appearance-none;
+  @apply w-full overflow-hidden cursor-grab outline-none rounded-sm appearance-none;
 
   &::-webkit-slider-runnable-track {
-    @apply h-[7px] bg-zinc-900;
+    @apply h-[25px] bg-zinc-900;
   }
 
   &::-webkit-slider-thumb {
-    @apply -mt-[6px] w-[20px] h-[20px] bg-accent rounded-full appearance-none;
+    @apply w-[25px] h-[25px] bg-zinc-200 rounded-sm appearance-none;
+
+    box-shadow: -100vw 0 0 99vw #cfc493;
   }
 }
 
