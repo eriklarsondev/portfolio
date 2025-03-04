@@ -7,7 +7,9 @@
             <FooterMenu />
           </div>
 
-          <div class="flex-1"></div>
+          <div class="flex-1">
+            <Logo src="https://res.cloudinary.com/dst50wvgy/image/upload/v1741105778/badge_0aa814824b.svg" />
+          </div>
 
           <div class="flex-1 order-last">
             <SocialMediaBar />
