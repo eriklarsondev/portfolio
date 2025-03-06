@@ -7,7 +7,7 @@
             <font-awesome icon="terminal" />
           </template>
         </Subheading>
-        <ListGroup :items="['Web Design', 'App Development', 'SEO']" class="mb-5" />
+        <ListGroup :items="['Web Design', 'App Development', 'SEO', 'IT Services']" class="mb-5" />
 
         <TypedHeading slug="homepage-hero" class="mb-3" />
         <Callout>
