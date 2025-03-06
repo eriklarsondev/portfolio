@@ -2,12 +2,12 @@
   <div class="homepage-hero relative mb-20 pt-20 pb-10">
     <div class="container relative max-w-[1260px]">
       <div class="max-w-3xl">
-        <Subheading label="Technical focus" class="[&]:mb-1">
+        <Subheading label="Providing expertise in" class="[&]:mb-1">
           <template v-slot:icon>
             <font-awesome icon="terminal" />
           </template>
         </Subheading>
-        <ListGroup :items="['Node.js', 'Vue', 'WordPress', 'Strapi']" class="mb-5" />
+        <ListGroup :items="['Web Design', 'App Development', 'SEO']" class="mb-5" />
 
         <TypedHeading slug="homepage-hero" class="mb-3" />
         <Callout>
@@ -41,7 +41,7 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 .homepage-hero::before {
-  @apply absolute content-[''] bottom-0 left-1/2 w-screen h-screen;
+  @apply absolute content-[''] bottom-0 md:left-1/2 left-1/3 w-screen h-screen;
 
   background-image: radial-gradient(circle at 1px 1px, #52525b 1px, transparent 0);
   background-size: 30px 30px;

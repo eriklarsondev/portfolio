@@ -18,7 +18,7 @@
           v-for="(item, index) in data.items"
           :key="index"
           @click.prevent="toggleMenu()"
-          :class="['block', { 'sm:mb-[9vw] mb-[13vw]': index < data.items.length - 1 }]">
+          :class="['block', { 'md:mb-[9vw] sm:mb-[13vw] mb-[14vw]': index < data.items.length - 1 }]">
           <NuxtLink
             :to="item.url"
             :target="!item.newTab ? '_self' : '_blank'"

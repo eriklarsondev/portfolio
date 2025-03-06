@@ -50,7 +50,7 @@
             <div v-html="item.content"></div>
           </div>
 
-          <Subheading label="Technologies" :muted="true" class="mt-5 [&]:mb-1" />
+          <Subheading label="Technology stack" :muted="true" class="mt-5 [&]:mb-1" />
           <ListGroup :items="item.technologies" />
         </div>
 

@@ -1,73 +1,121 @@
 <template>
-  <form @submit.prevent="submit()">
-    <div class="flex sm:flex-row flex-col gap-5 mb-5">
-      <div class="flex-1">
-        <label>Full Name</label>
-        <input type="text" placeholder="John Smith" v-model="fields.fullName" required />
-      </div>
+  <div>
+    <form @submit.prevent="sendMessage()">
+      <div class="flex sm:flex-row flex-col gap-5 mb-5">
+        <div class="flex-1">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your Name" v-model="fields.fullName" required />
+        </div>
 
-      <div class="flex-1">
-        <label>Email</label>
-        <input type="text" placeholder="john@gmail.com" v-model="fields.email" required />
-      </div>
-    </div>
-
-    <div class="flex sm:flex-row flex-col gap-5 mb-5">
-      <div class="flex-1">
-        <label>Website URL</label>
-        <input type="text" placeholder="www.google.com" v-model="fields.websiteUrl" />
-      </div>
-    </div>
-
-    <div class="flex sm:flex-row flex-col gap-5 mb-5" v-if="route.path === '/services'">
-      <div class="flex-1">
-        <label>Project Type</label>
-        <select v-model="fields.services">
-          <option v-for="(item, index) in data" :key="index" :value="item.name">{{ item.name }}</option>
-        </select>
-      </div>
-
-      <div class="flex-1">
-        <label>Budget / Price Range</label>
-        <input type="range" min="500" max="10000" step="500" v-model="fields.budget" />
-
-        <div class="flex items-center h-[25px] mt-1">
-          <Subheading :label="`$${fields.budget}`" class="[&]:m-0 [&]:text-zinc-200">
-            <template v-slot:icon>
-              <font-awesome icon="tag" />
-            </template>
-          </Subheading>
+        <div class="flex-1">
+          <label>Email</label>
+          <input type="text" placeholder="Your Email" v-model="fields.email" required />
         </div>
       </div>
-    </div>
 
-    <div class="flex sm:flex-row flex-col gap-5 mb-5">
-      <div class="flex-1">
-        <label>Message</label>
-        <textarea placeholder="Tell me about your next project" v-model="fields.message" required></textarea>
+      <div class="flex sm:flex-row flex-col gap-5 mb-5">
+        <div class="flex-1">
+          <label>Website URL</label>
+          <input type="text" placeholder="www.google.com" v-model="fields.websiteUrl" />
+        </div>
+      </div>
+
+      <div class="flex sm:flex-row flex-col gap-5 mb-5" v-if="route.path === '/services'">
+        <div class="flex-1">
+          <label>Project Type</label>
+          <select v-model="scope.type">
+            <option v-for="(item, index) in data" :key="index" :value="item.name">{{ item.name }}</option>
+          </select>
+        </div>
+
+        <div class="flex-1">
+          <label>Budget / Price Range</label>
+          <input type="range" min="500" max="10000" step="500" v-model="scope.budget" />
+
+          <div class="flex items-center h-[25px] mt-1">
+            <Subheading :label="`$${scope.budget}`" class="[&]:m-0 [&]:text-zinc-200">
+              <template v-slot:icon>
+                <font-awesome icon="tag" />
+              </template>
+            </Subheading>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex sm:flex-row flex-col gap-5 mb-5">
+        <div class="flex-1">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your next project" v-model="fields.message" required></textarea>
+        </div>
+      </div>
+
+      <div class="flex sm:flex-row flex-col gap-5">
+        <div class="flex-1">
+          <SubmitButton />
+        </div>
+      </div>
+    </form>
+
+    <div ref="scroll">
+      <div class="mt-10 p-6 text-center bg-accent/20 border-2 border-dotted border-accent" v-if="success">
+        <font-awesome icon="circle-check" class="mb-3 text-3xl text-accent"></font-awesome>
+        <Subheading label="Your message has been received" class="[&]:m-0" />
+      </div>
+
+      <div class="mt-10 p-6 text-center bg-red-400/20 border-2 border-dotted border-red-400" v-if="error">
+        <font-awesome icon="triangle-exclamation" class="mb-3 text-3xl text-red-400"></font-awesome>
+        <Subheading label="Something went wrong, please try again" class="[&]:m-0 [&]:text-red-400" />
       </div>
     </div>
-
-    <div class="flex sm:flex-row flex-col gap-5">
-      <div class="flex-1">
-        <SubmitButton />
-      </div>
-    </div>
-  </form>
+  </div>
 </template>
 
 <script setup>
 const route = useRoute()
 
-const fields = ref({ fullName: null, email: null, websiteUrl: null, services: null, budget: 5000, message: null })
+const fields = ref({ fullName: null, email: null, websiteUrl: null, message: null })
+const scope = ref({ type: null, budget: 5000 })
+
 const meta = ref({ location: route.path })
+
+const scroll = ref()
+
+const success = ref(false)
+const error = ref(false)
 
 const { data } = await useFetch('/api/services')
 
-async function submit() {
+async function sendMessage() {
   try {
-    const payload = await useFetch('/api/leads', fields)
-  } catch (err) {}
+    let payload
+    if (route.path === '/services') {
+      payload = { ...fields.value, ...scope.value, ...meta.value }
+    } else {
+      payload = { ...fields.value, ...meta.value }
+    }
+
+    await $fetch('/api/leads', {
+      method: 'post',
+      body: payload
+    })
+    success.value = true
+    error.value = false
+
+    fields.value = { fullName: null, email: null, websiteUrl: null, message: null }
+    scope.value = { type: null, budget: 5000 }
+
+    meta.value = { location: route.path }
+  } catch (err) {
+    success.value = false
+    error.value = true
+  }
+
+  scroll.value.scrollIntoView({ behavior: 'smooth' })
+
+  setTimeout(() => {
+    success.value = false
+    error.value = false
+  }, 25000)
 }
 </script>
 

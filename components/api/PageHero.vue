@@ -30,7 +30,7 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 .page-hero::before {
-  @apply absolute content-[''] bottom-0 left-1/2 w-screen h-screen;
+  @apply absolute content-[''] bottom-0 md:left-1/2 left-1/3 w-screen h-screen;
 
   background-image: radial-gradient(circle at 1px 1px, #52525b 1px, transparent 0);
   background-size: 30px 30px;

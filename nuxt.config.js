@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   fontawesome: {
     icons: {
       solid: [
+        'check-circle',
         'building-user',
         'location-dot',
         'paper-plane',
