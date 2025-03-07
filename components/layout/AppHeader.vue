@@ -7,9 +7,16 @@
             <Logo src="https://res.cloudinary.com/dst50wvgy/image/upload/v1741106159/logo_7136b0bd54.svg" />
           </div>
 
-          <div>
-            <Navbar class="lg:block hidden" />
-            <MobileMenu class="lg:hidden block" />
+          <div class="lg:block hidden">
+            <Navbar />
+          </div>
+
+          <div class="lg:hidden block">
+            <MobileMenu />
+          </div>
+
+          <div class="lg:block hidden" v-if="route.path !== '/hire'">
+            <CyberpunkButton label="Hire Me" url="/hire" />
           </div>
         </div>
       </div>
@@ -18,3 +25,7 @@
     <div class="h-[70px]"></div>
   </div>
 </template>
+
+<script setup>
+const route = useRoute()
+</script>

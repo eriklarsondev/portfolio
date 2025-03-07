@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="flex sm:flex-row flex-col gap-5 mb-5" v-if="route.path === '/services'">
+      <div class="flex sm:flex-row flex-col gap-5 mb-5" v-if="route.path === '/hire'">
         <div class="flex-1">
           <label>Project Type</label>
           <select v-model="scope.type">
@@ -88,7 +88,7 @@ const { data } = await useFetch('/api/services')
 async function sendMessage() {
   try {
     let payload
-    if (route.path === '/services') {
+    if (route.path === '/hire') {
       payload = { ...fields.value, ...scope.value, ...meta.value }
     } else {
       payload = { ...fields.value, ...meta.value }

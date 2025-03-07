@@ -5,7 +5,7 @@
     <div class="container max-w-[1260px]">
       <Heading label="Let's build something great" class="text-center" />
 
-      <LinkContainer label="Let's Work Together" url="/services">
+      <LinkContainer label="Let's Work Together" url="/hire">
         <Services />
       </LinkContainer>
     </div>
@@ -17,9 +17,9 @@
         <Callout :alternate="true" class="mb-8">
           <Content slug="tech-expert" />
         </Callout>
-
-        <Technologies />
       </div>
+
+      <Technologies class="max-w-5xl mx-auto" />
     </SlantedContainer>
 
     <div class="container max-w-[1260px]">

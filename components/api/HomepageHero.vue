@@ -2,11 +2,6 @@
   <div class="homepage-hero relative mb-20 pt-20 pb-10">
     <div class="container relative max-w-[1260px]">
       <div class="max-w-3xl">
-        <Subheading label="Providing expertise in" class="[&]:mb-1">
-          <template v-slot:icon>
-            <font-awesome icon="terminal" />
-          </template>
-        </Subheading>
         <ListGroup :items="['Web Design', 'App Development', 'SEO', 'IT Services']" class="mb-5" />
 
         <TypedHeading slug="homepage-hero" class="mb-3" />

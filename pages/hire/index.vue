@@ -11,6 +11,10 @@
         <Heading label="Let's work together" />
 
         <ContactForm />
+
+        <Separator class="[&]:my-20" />
+
+        <Testimonials />
       </div>
     </SlantedContainer>
 

@@ -4,8 +4,8 @@
       <div v-for="(item, index) in data" :key="index">
         <div
           :class="[
-            'tech flex gap-5 relative lg:py-7',
-            { bordered: index < data.length - 2, 'lg:pr-7': index % 2 === 0, 'lg:pl-7': index % 2 !== 0 }
+            'tech flex gap-5 relative lg:py-8',
+            { bordered: index < data.length - 2, 'lg:pr-8': index % 2 === 0, 'lg:pl-8': index % 2 !== 0 }
           ]">
           <div>
             <i :class="['text-6xl text-accent', item.icon]"></i>
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <hr class="lg:hidden block my-7 border-zinc-800" v-if="index < data.length - 1" />
+        <hr class="lg:hidden block border-zinc-800" v-if="index < data.length - 1" />
       </div>
     </div>
 
