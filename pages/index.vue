@@ -14,7 +14,7 @@
       <div class="max-w-4xl mx-auto">
         <Heading label="Technology expert" class="[&]:mb-3" />
 
-        <Callout :alternate="true" class="mb-8">
+        <Callout :lighten="true" class="mb-8">
           <Content slug="tech-expert" />
         </Callout>
       </div>

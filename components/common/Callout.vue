@@ -1,11 +1,15 @@
 <template>
-  <div :class="['callout relative sm:ml-3 sm:p-5 p-4 bg-zinc-900', { alternate: props.alternate }]">
+  <div
+    :class="[
+      'callout relative sm:ml-3 sm:p-5 p-4 backdrop-blur',
+      { 'bg-zinc-900': !props.lighten, 'lighten bg-white/10': props.lighten }
+    ]">
     <slot />
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['alternate'])
+const props = defineProps(['lighten'])
 </script>
 
 <style lang="scss">
@@ -31,8 +35,8 @@ const props = defineProps(['alternate'])
     @apply mb-0;
   }
 
-  &.alternate::after {
-    @apply border-r-zinc-950;
+  &.lighten::after {
+    @apply border-r-zinc-900;
   }
 }
 </style>

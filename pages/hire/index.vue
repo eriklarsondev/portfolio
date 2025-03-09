@@ -4,17 +4,17 @@
 
     <div class="container max-w-[1260px]">
       <Services />
+
+      <Separator :lighten="true" />
+
+      <Testimonials />
     </div>
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
         <Heading label="Let's work together" />
 
-        <ContactForm />
-
-        <Separator class="[&]:my-20" />
-
-        <Testimonials />
+        <ContactForm :lighten="true" />
       </div>
     </SlantedContainer>
 

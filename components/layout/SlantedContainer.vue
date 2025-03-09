@@ -10,15 +10,15 @@
 .slanted-container {
   &::before,
   &::after {
-    @apply absolute content-[''] left-0 w-screen h-3/4 bg-zinc-950;
+    @apply absolute content-[''] left-0 w-screen h-3/4 bg-zinc-900;
   }
 
   &::before {
-    @apply top-0 border-t-4 border-zinc-900 -skew-y-[2deg];
+    @apply top-0 -skew-y-[2deg];
   }
 
   &::after {
-    @apply bottom-0 border-b-4 border-zinc-900 skew-y-[2deg];
+    @apply bottom-0 skew-y-[2deg];
   }
 }
 </style>

@@ -16,7 +16,7 @@
           </div>
 
           <div class="lg:block hidden" v-if="route.path !== '/hire'">
-            <CyberpunkButton label="Hire Me" url="/hire" />
+            <HireButton label="Hire Me" url="/hire" />
           </div>
         </div>
       </div>

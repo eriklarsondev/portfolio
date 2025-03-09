@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="sendMessage()">
+    <form @submit.prevent="sendMessage()" :class="{ lighten: props.lighten }">
       <div class="flex sm:flex-row flex-col gap-5 mb-5">
         <div class="flex-1">
           <label>Full Name</label>
@@ -33,9 +33,9 @@
           <input type="range" min="500" max="10000" step="500" v-model="scope.budget" />
 
           <div class="flex items-center h-[25px] mt-1">
-            <Subheading :label="`$${scope.budget}`" class="[&]:m-0 [&]:text-zinc-200">
+            <Subheading :label="`$${scope.budget}`" class="[&]:m-0 [&]:text-base [&]:text-zinc-400">
               <template v-slot:icon>
-                <font-awesome icon="tag" />
+                <font-awesome icon="tag" class="text-accent" />
               </template>
             </Subheading>
           </div>
@@ -72,6 +72,7 @@
 
 <script setup>
 const route = useRoute()
+const props = defineProps(['lighten'])
 
 const fields = ref({ fullName: null, email: null, websiteUrl: null, message: null })
 const scope = ref({ type: null, budget: 5000 })
@@ -151,5 +152,17 @@ input[type='range'] {
 
 textarea {
   @apply h-[300px] py-4 resize-none;
+}
+
+form.lighten {
+  input,
+  textarea,
+  select {
+    @apply bg-zinc-800 focus:bg-accent/30;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    @apply bg-zinc-800;
+  }
 }
 </style>
