@@ -27,6 +27,8 @@ export default defineNuxtConfig({
       solid: [
         'check-circle',
         'building-user',
+        'folder',
+        'laptop',
         'location-dot',
         'paper-plane',
         'tag',

@@ -5,9 +5,7 @@
         v-for="(item, index) in data.items"
         :key="index"
         :class="['inline-block', { 'mr-7': index < data.items.length - 1 }]">
-        <NavLink :label="item.label" :url="item.url" :tab="item.newTab">
-          <template v-slot:prefix>0{{ index + 1 }}.</template>
-        </NavLink>
+        <NavLink :label="item.label" :url="item.url" :tab="item.newTab" />
       </li>
     </ul>
 
