@@ -1,8 +1,7 @@
 export default defineNuxtConfig({
   aos: {
     delay: 500,
-    duration: 1000,
-    once: true
+    duration: 1000
   },
   app: {
     head: {

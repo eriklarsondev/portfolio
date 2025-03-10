@@ -8,7 +8,7 @@
           <AboutPageSidebar />
         </div>
 
-        <div class="flex-1">
+        <div class="flex-1" data-aos="fade-left">
           <Content slug="about-me" />
         </div>
       </div>

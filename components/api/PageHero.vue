@@ -2,12 +2,12 @@
   <div class="page-hero relative mb-10 pt-20 pb-10">
     <div class="container relative max-w-[1260px]">
       <div v-if="data">
-        <Subheading :label="data.name" class="[&]:mb-1">
+        <Subheading :label="data.name" class="[&]:mb-1" data-aos="fade-down">
           <template v-slot:icon>
             <font-awesome icon="terminal" />
           </template>
         </Subheading>
-        <Heading :label="data.headline" class="[&]:m-0" />
+        <Heading :label="data.headline" class="[&]:m-0" data-aos="fade-right" />
 
         <UtilityMenu :items="data.controls" class="mt-10" v-if="data.controls && data.controls.length" />
       </div>

@@ -4,7 +4,7 @@
       <slot />
     </div>
 
-    <div class="mt-10 text-center">
+    <div class="mt-10 text-center" data-aos="zoom-in-up">
       <Button :label="props.label" :url="props.url" :tab="props.tab" />
     </div>
   </div>

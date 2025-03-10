@@ -5,16 +5,16 @@
     <div class="container max-w-[1260px]">
       <Services />
 
-      <Separator :lighten="true" />
+      <Separator />
 
       <Testimonials />
     </div>
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Let's work together" />
+        <Heading label="Let's work together" data-aos="fade-down" />
 
-        <ContactForm :lighten="true" />
+        <ContactForm :lighten="true" data-aos="flip-left" />
       </div>
     </SlantedContainer>
 

@@ -19,10 +19,13 @@
           <Subheading :label="item.startYear" class="[&]:m-0 [&]:text-zinc-200" />
         </div>
 
-        <div :class="['flex-1 job relative', { left: index % 2 === 0, right: index % 2 !== 0 }]">
+        <div
+          :class="['flex-1 job relative', { left: index % 2 === 0, right: index % 2 !== 0 }]"
+          :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+          :data-aos-delay="(index + 1) * 150">
           <div class="flex items-center mb-1">
             <div class="flex-1">
-              <h3 class="m-0">{{ item.company }}</h3>
+              <h2 class="m-0">{{ item.company }}</h2>
             </div>
 
             <div>

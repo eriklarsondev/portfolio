@@ -3,7 +3,7 @@
     <HomepageHero />
 
     <div class="container max-w-[1260px]">
-      <Heading label="Let's build something great" class="text-center" />
+      <Heading label="Let's build something great" class="text-center" data-aos="flip-left" />
 
       <LinkContainer label="Let's Work Together" url="/hire">
         <Services />
@@ -11,12 +11,14 @@
     </div>
 
     <SlantedContainer>
-      <div class="max-w-4xl mx-auto">
-        <Heading label="Technology expert" class="[&]:mb-3" />
+      <div class="max-w-3xl mx-auto">
+        <Heading label="Technology expert" class="[&]:mb-3" data-aos="fade-down" />
 
-        <Callout :lighten="true" class="mb-8">
+        <Callout :lighten="true" class="mb-8" data-aos="fade-left">
           <Content slug="tech-expert" />
         </Callout>
+
+        <Separator :lighten="true" class="[&]:my-[3rem]" />
       </div>
 
       <Technologies class="max-w-5xl mx-auto" />
@@ -27,7 +29,7 @@
 
       <Separator />
 
-      <Heading label="Open-source advocate" class="text-center" />
+      <Heading label="Open-source collaboration" class="text-center" data-aos="zoom-in-down" />
       <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
         <GithubRepos />
       </LinkContainer>
