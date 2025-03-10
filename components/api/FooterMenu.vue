@@ -4,9 +4,7 @@
       <li
         v-for="(item, index) in data.items"
         :key="index"
-        :class="['block', { 'mb-1': index < data.items.length - 1 }]"
-        data-aos="zoom-in"
-        :data-aos-delay="(index + 1) * 300">
+        :class="['block', { 'mb-1': index < data.items.length - 1 }]">
         <NavLink :label="item.label" :url="item.url" :tab="item.newTab" />
       </li>
     </ul>

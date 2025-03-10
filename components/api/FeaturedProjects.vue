@@ -1,12 +1,15 @@
 <template>
   <div>
-    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5" v-if="data && data.length">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-8" v-if="data && data.length">
       <div
-        v-for="item in data"
+        v-for="(item, index) in data"
         :key="item.documentId"
-        class="project relative lg:h-96 md:h-[50vw] sm:h-[70vw] h-[80vw] overflow-hidden bg-zinc-900"
-        data-aos="zoom-in"
-        :data-aos-delay="(index + 1) * 300">
+        class="project relative lg:h-96 md:h-[50vw] sm:h-[70vw] h-[80vw] overflow-hidden bg-zinc-900 rounded-xl">
+        <div
+          class="image absolute top-0 left-0 w-full h-full bg-zinc-900/40 bg-blend-multiply bg-cover bg-center grayscale transition-all duration-500"
+          :style="{ backgroundImage: `url(${item.image.url})` }"
+          v-if="item.image"></div>
+
         <div class="top flex flex-col justify-end absolute top-0 left-0 w-full h-full p-6 transition-all duration-500">
           <h2 class="mb-1 text-3xl">{{ item.name }}</h2>
           <Subheading :label="item.platform" class="[&]:m-0">
@@ -19,10 +22,10 @@
         <div
           class="bottom flex flex-col justify-end absolute top-full left-0 w-full h-full p-6 transition-all duration-500">
           <div>
-            <ListGroup :items="item.technologies" class="mb-5" />
+            <ListGroup :items="item.technologies" class="mb-5" v-if="item.technologies" />
 
             <Subheading :label="item.name" class="[&]:mb-1" />
-            <span class="block leading-7 text-zinc-300">
+            <span class="block leading-6 text-zinc-300">
               {{ item.description ? item.description : '&mdash;' }}
             </span>
 
@@ -42,12 +45,16 @@ const { data } = await useFetch('/api/projects?featured=true')
 
 <style lang="scss" scoped>
 .project:hover {
+  .image {
+    @apply bg-zinc-900/80;
+  }
+
   .top {
     @apply -left-full;
   }
 
   .bottom {
-    @apply top-0;
+    @apply top-0 backdrop-blur;
   }
 }
 </style>

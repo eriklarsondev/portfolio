@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content-block" v-if="data">
-      <div class="sm:leading-7 leading-6 sm:text-base text-[14px]" v-html="data.content"></div>
+      <div class="leading-7" v-html="data.content"></div>
     </div>
 
     <Error v-if="!data">{{ props.slug }} was not found</Error>
