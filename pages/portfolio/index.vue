@@ -7,7 +7,7 @@
 
       <Separator />
 
-      <Heading label="Open-source collaboration" class="text-center" data-aos="zoom-in-down" />
+      <Heading label="Open-source collaboration" class="text-center" data-aos="flip-left" />
       <GithubRepos />
     </div>
   </div>

@@ -12,7 +12,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Let's work together" data-aos="fade-down" />
+        <Heading label="Let's work together" data-aos="fade-right" />
 
         <ContactForm :lighten="true" data-aos="flip-left" />
       </div>
