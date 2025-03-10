@@ -4,7 +4,9 @@
       <div
         v-for="item in data"
         :key="item.documentId"
-        class="project relative lg:h-96 md:h-[50vw] sm:h-[70vw] h-[80vw] overflow-hidden bg-zinc-900">
+        class="project relative lg:h-96 md:h-[50vw] sm:h-[70vw] h-[80vw] overflow-hidden bg-zinc-900"
+        data-aos="zoom-in"
+        :data-aos-delay="(index + 1) * 300">
         <div class="top flex flex-col justify-end absolute top-0 left-0 w-full h-full p-6 transition-all duration-500">
           <h2 class="mb-1 text-3xl">{{ item.name }}</h2>
           <Subheading :label="item.platform" class="[&]:m-0">

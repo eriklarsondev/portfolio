@@ -4,7 +4,7 @@
       <slot />
     </div>
 
-    <div class="mt-10 text-center">
+    <div class="mt-10 text-center" data-aos="fade-up" :data-aos-delay="1000">
       <Button :label="props.label" :url="props.url" :tab="props.tab" />
     </div>
   </div>

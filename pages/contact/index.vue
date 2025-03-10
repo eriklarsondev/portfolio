@@ -14,11 +14,11 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Callout :lighten="true" class="mb-8">
+        <Callout :lighten="true" class="mb-8" data-aos="fade-right" :data-aos-delay="500">
           <Content slug="working-together" />
         </Callout>
 
-        <ContactForm :lighten="true" />
+        <ContactForm :lighten="true" data-aos="flip-left" :data-aos-delay="(index + 1) * 300" />
       </div>
     </SlantedContainer>
 

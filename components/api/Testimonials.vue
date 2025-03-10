@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="max-w-5xl mx-auto" v-if="data && data.length">
-      <Heading label="Delivering proven results" class="[&]:mb-1" />
-      <Subheading label="Collaborating with clients all over the country" class="[&]:md:mb-4 [&]:mb-3" />
+      <Heading label="Delivering proven results" class="[&]:mb-1" data-aos="fade-down" :data-aos-delay="500" />
+      <Subheading
+        label="Collaborating with clients all over the country"
+        class="[&]:md:mb-4 [&]:mb-3"
+        data-aos="fade-right"
+        :data-aos-delay="500" />
 
       <div class="relative">
         <font-awesome icon="quote-left" class="absolute -top-20 lg:-left-10 left-0 opacity-20 text-[10rem]" />

@@ -2,7 +2,7 @@
   <div
     :class="[
       'callout relative sm:ml-3 sm:p-5 p-4 backdrop-blur',
-      { 'bg-zinc-900': !props.lighten, 'lighten bg-white/10': props.lighten }
+      { 'bg-zinc-900': !props.lighten, 'lighten bg-zinc-800': props.lighten }
     ]">
     <slot />
   </div>

@@ -5,13 +5,13 @@
         <ListGroup :items="['Web Design', 'App Development', 'SEO', 'IT Services']" class="mb-5" />
 
         <TypedHeading slug="homepage-hero" class="mb-3" />
-        <Callout>
+        <Callout data-aos="fade-right" :data-aos-delay="500">
           <Content slug="homepage-hero" />
         </Callout>
 
         <div class="flex items-center sm:gap-8 gap-5 mt-8">
           <div>
-            <Button label="Let's connect" url="/contact" />
+            <Button label="Let's connect" url="/contact" data-aos="fade-up" :data-aos-delay="500" />
           </div>
 
           <div>|</div>

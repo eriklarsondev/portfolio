@@ -4,20 +4,25 @@
       <div v-for="(item, index) in data" :key="index">
         <div
           :class="[
-            'tech flex gap-5 relative lg:py-8',
+            'tech relative lg:py-8',
             { bordered: index < data.length - 2, 'lg:pr-8': index % 2 === 0, 'lg:pl-8': index % 2 !== 0 }
           ]">
-          <div>
-            <i :class="['text-6xl text-accent', item.icon]"></i>
-          </div>
+          <div
+            class="flex gap-5"
+            :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+            :data-aos-delay="(index + 1) * 300">
+            <div>
+              <i :class="['text-6xl text-accent', item.icon]"></i>
+            </div>
 
-          <div>
-            <Subheading :label="item.name" class="[&]:mb-1 [&]:text-zinc-200" />
-            <span class="block mb-2 lg:leading-5 sm:leading-6 leading-5 lg:text-sm sm:text-base text-sm">
-              {{ item.description ? item.description : '&mdash;' }}
-            </span>
+            <div>
+              <Subheading :label="item.name" class="[&]:mb-1 [&]:text-zinc-200" />
+              <span class="block mb-2 lg:leading-5 sm:leading-6 leading-5 lg:text-sm sm:text-base text-sm">
+                {{ item.description ? item.description : '&mdash;' }}
+              </span>
 
-            <NavLink label="Learn More" :url="item.url" :tab="true" class="[&]:text-accent" />
+              <NavLink label="Learn More" :url="item.url" :tab="true" class="[&]:text-accent" />
+            </div>
           </div>
         </div>
 

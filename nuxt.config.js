@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+  aos: {
+    delay: 500,
+    duration: 1000,
+    offset: 300,
+    once: true
+  },
   app: {
     head: {
       charset: 'utf-8',
@@ -40,7 +46,14 @@ export default defineNuxtConfig({
       brands: ['x-twitter', 'github', 'linkedin']
     }
   },
-  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome', 'vue3-carousel-nuxt'],
+  modules: [
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/tailwindcss',
+    '@vesp/nuxt-fontawesome',
+    'nuxt-aos',
+    'vue3-carousel-nuxt'
+  ],
   runtimeConfig: {
     apiToken: process.env.API_TOKEN,
     basePath: process.env.BASE_PATH,
