@@ -7,6 +7,13 @@
 
       <Separator />
 
+      <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">
+        Following the<br />digital project lifecycle
+      </Heading>
+      <Strategies />
+
+      <Separator />
+
       <Testimonials />
     </div>
 

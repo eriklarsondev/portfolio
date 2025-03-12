@@ -12,7 +12,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Technology expert" class="[&]:mb-3" data-aos="fade-down" />
+        <Heading label="Technology expert" :muted="true" :cta="true" class="[&]:mb-3" data-aos="fade-down" />
 
         <Callout :lighten="true" class="mb-8" data-aos="fade-left">
           <Content slug="tech-expert" />
@@ -29,7 +29,7 @@
 
       <Separator />
 
-      <Heading label="Open-source collaboration" class="text-center" data-aos="flip-left" />
+      <Heading label="Open source collaboration" :muted="true" :cta="true" class="text-center" data-aos="flip-left" />
       <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
         <GithubRepos />
       </LinkContainer>

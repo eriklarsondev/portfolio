@@ -1,23 +1,28 @@
 <template>
   <div class="homepage-hero relative mb-20 pt-20 pb-10">
     <div class="container relative max-w-[1260px]">
-      <div class="max-w-3xl">
-        <ListGroup :items="['Web Design', 'App Development', 'SEO', 'IT Services']" class="mb-5" data-aos="fade-down" />
+      <div class="flex gap-20">
+        <div class="flex-1 max-w-3xl">
+          <ListGroup
+            :items="['Web Design', 'App Development', 'SEO', 'IT Services']"
+            class="mb-5"
+            data-aos="fade-down" />
 
-        <TypedHeading slug="homepage-hero" class="mb-3" />
-        <Callout data-aos="fade-right">
-          <Content slug="homepage-hero" />
-        </Callout>
+          <TypedHeading slug="homepage-hero" class="mb-3" />
+          <Callout data-aos="fade-right">
+            <Content slug="homepage-hero" />
+          </Callout>
 
-        <div class="flex items-center sm:gap-8 gap-5 mt-8">
-          <div>
-            <Button label="Let's connect" url="/contact" data-aos="fade-up" />
-          </div>
+          <div class="flex items-center sm:gap-8 gap-5 mt-8">
+            <div>
+              <Button label="Let's connect" url="/contact" data-aos="fade-up" />
+            </div>
 
-          <div>|</div>
+            <div>|</div>
 
-          <div>
-            <SocialMediaBar />
+            <div>
+              <SocialMediaBar />
+            </div>
           </div>
         </div>
       </div>
