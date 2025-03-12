@@ -29,7 +29,7 @@
 
       <Separator />
 
-      <Heading label="Open source collaboration" :muted="true" :cta="true" class="text-center" data-aos="flip-left" />
+      <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">Open source collaboration</Heading>
       <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
         <GithubRepos />
       </LinkContainer>

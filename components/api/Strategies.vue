@@ -9,7 +9,7 @@
         class="xl:text-center"
         data-aos="fade-right"
         :data-aos-delay="(index + 1) * 150">
-        <em class="font-serif text-8xl text-accent">0{{ item.order }}</em>
+        <em class="font-serif sm:text-8xl text-7xl text-accent">0{{ item.order }}</em>
 
         <h2 class="mt-1 mb-0 xl:text-3xl md:text-4xl text-3xl">{{ item.name }}</h2>
         <div class="inline-block mt-2 xl:ml-3 text-left" v-if="item.content">
