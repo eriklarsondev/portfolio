@@ -2,7 +2,7 @@
   <div>
     <PageHero slug="about-me" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <div class="flex lg:flex-row flex-col xl:gap-20 gap-10">
         <div class="lg:w-64 w-full">
           <AboutPageSidebar />
@@ -12,6 +12,6 @@
           <Content slug="about-me" />
         </div>
       </div>
-    </div>
+    </Container>
   </div>
 </template>

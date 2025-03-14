@@ -2,8 +2,8 @@
   <div>
     <PageHero slug="industry-experience" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Experience />
-    </div>
+    </Container>
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div>
     <PageHero slug="web-services" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Services />
 
       <Separator />
@@ -11,14 +11,14 @@
         Following the<br />digital project lifecycle
       </Heading>
       <Strategies />
-    </div>
+    </Container>
 
     <HireCTA
       image="https://images.pexels.com/photos/11988945/pexels-photo-11988945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Testimonials />
-    </div>
+    </Container>
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
@@ -31,9 +31,9 @@
       </div>
     </SlantedContainer>
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <CalendlyEmbed />
-    </div>
+    </Container>
   </div>
 </template>
 

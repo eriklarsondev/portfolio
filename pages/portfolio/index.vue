@@ -2,15 +2,15 @@
   <div>
     <PageHero slug="portfolio" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <FeaturedProjects />
-    </div>
+    </Container>
 
     <SlantedContainer></SlantedContainer>
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">Open source collaboration</Heading>
       <GithubRepos />
-    </div>
+    </Container>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="homepage-hero relative mb-20 pt-20 pb-10">
-    <div class="container relative max-w-[1260px]">
+    <Container class="relative">
       <div class="flex gap-20">
         <div class="flex-1 max-w-3xl">
           <ListGroup
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   </div>
 </template>
 

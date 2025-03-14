@@ -1,8 +1,8 @@
 <template>
   <div class="slanted-container relative xl:my-32 my-20 xl:py-32 py-20">
-    <div class="container relative z-10 max-w-[1260px]">
+    <Container class="relative z-10">
       <slot />
-    </div>
+    </Container>
   </div>
 </template>
 

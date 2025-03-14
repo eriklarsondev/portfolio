@@ -2,7 +2,7 @@
   <div>
     <PageHero slug="get-in-touch" />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <LinkContainer label="Let's work together" url="/hire">
         <Services />
       </LinkContainer>
@@ -10,7 +10,7 @@
       <Separator />
 
       <Testimonials />
-    </div>
+    </Container>
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
@@ -22,9 +22,9 @@
       </div>
     </SlantedContainer>
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <CalendlyEmbed />
-    </div>
+    </Container>
   </div>
 </template>
 

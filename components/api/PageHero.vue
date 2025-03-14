@@ -1,6 +1,6 @@
 <template>
   <div class="page-hero relative mb-10 pt-20 pb-10">
-    <div class="container relative max-w-[1260px]">
+    <Container class="relative">
       <div v-if="data">
         <Subheading :label="data.name" class="[&]:mb-1" data-aos="fade-down">
           <template v-slot:icon>
@@ -13,7 +13,7 @@
       </div>
 
       <Error v-if="!data">{{ props.slug }} was not found</Error>
-    </div>
+    </Container>
   </div>
 </template>
 

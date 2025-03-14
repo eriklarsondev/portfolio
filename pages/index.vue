@@ -2,13 +2,13 @@
   <div>
     <HomepageHero />
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Heading label="Let's build something great" class="text-center" data-aos="flip-left" />
 
       <LinkContainer label="Let's Work Together" url="/hire">
         <Services />
       </LinkContainer>
-    </div>
+    </Container>
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
@@ -24,7 +24,7 @@
       <Technologies class="max-w-5xl mx-auto" />
     </SlantedContainer>
 
-    <div class="container max-w-[1260px]">
+    <Container>
       <Testimonials />
 
       <Separator />
@@ -33,6 +33,6 @@
       <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
         <GithubRepos />
       </LinkContainer>
-    </div>
+    </Container>
   </div>
 </template>

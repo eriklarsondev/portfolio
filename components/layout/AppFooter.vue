@@ -1,7 +1,7 @@
 <template>
   <footer class="text-center">
     <div class="py-20 border-t-4 border-zinc-900">
-      <div class="container max-w-[1260px]">
+      <Container>
         <div class="flex lg:flex-row flex-col items-center gap-10">
           <div class="flex-1 lg:order-first order-2">
             <FooterMenu />
@@ -15,13 +15,13 @@
             <SocialMediaBar />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
 
     <div class="py-10 border-t-4 border-zinc-900">
-      <div class="container max-w-[1260px]">
+      <Container>
         <Subheading :label="`© ${currentYear} Erik Larson`" :muted="true" class="[&]:m-0" />
-      </div>
+      </Container>
     </div>
   </footer>
 </template>
