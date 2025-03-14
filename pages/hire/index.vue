@@ -13,7 +13,8 @@
       <Strategies />
     </div>
 
-    <GoogleMap />
+    <HireCTA
+      image="https://images.pexels.com/photos/11988945/pexels-photo-11988945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
 
     <div class="container max-w-[1260px]">
       <Testimonials />
