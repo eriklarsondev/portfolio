@@ -11,9 +11,11 @@
         Following the<br />digital project lifecycle
       </Heading>
       <Strategies />
+    </div>
 
-      <Separator />
+    <GoogleMap />
 
+    <div class="container max-w-[1260px]">
       <Testimonials />
     </div>
 
