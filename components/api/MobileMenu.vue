@@ -38,7 +38,7 @@ function toggleMenu() {
   toggle.value = !toggle.value
 }
 
-const { data } = await useFetch('/api/menus/navbar')
+const { data } = await useFetch('/api/menus/mobile-menu')
 </script>
 
 <style lang="scss" scoped>
