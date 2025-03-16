@@ -8,7 +8,7 @@
             class="mb-5"
             data-aos="fade-down" />
 
-          <TypedHeading slug="homepage-hero" class="mb-3" />
+          <TypedHeading slug="homepage-hero" class="mb-1" />
           <Callout data-aos="fade-right">
             <Content slug="homepage-hero" />
           </Callout>

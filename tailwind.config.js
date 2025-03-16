@@ -15,7 +15,7 @@ export default {
         accent: '#cfc493'
       },
       fontFamily: {
-        heading: ['Staatliches', ...defaultTheme.fontFamily.serif],
+        heading: ['Bebas Neue', ...defaultTheme.fontFamily.sans],
         serif: ['IBM Plex Serif', ...defaultTheme.fontFamily.serif],
         sans: ['Inter', ...defaultTheme.fontFamily.sans]
       }
