@@ -9,7 +9,7 @@
     <div class="flex justify-center sm:items-end items-center sm:absolute w-full h-full top-0 left-0 bg-black/20">
       <Container class="relative py-20 sm:text-center">
         <Heading :cta="true" class="[&]:m-0" data-aos="fade-down">
-          {{ data.heading }}
+          <div v-html="data.heading"></div>
         </Heading>
       </Container>
     </div>

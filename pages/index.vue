@@ -12,7 +12,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Technology expert" :muted="true" :cta="true" class="[&]:mb-3" data-aos="fade-down" />
+        <Heading label="Technology expert" :muted="true" :cta="true" class="[&]:mb-1" data-aos="fade-down" />
 
         <Callout :lighten="true" class="mb-8" data-aos="fade-left">
           <Content slug="tech-expert" />
