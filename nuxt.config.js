@@ -58,8 +58,7 @@ export default defineNuxtConfig({
     basePath: process.env.BASE_PATH,
     public: {
       calendlyPath: process.env.CALENDLY_PATH,
-      githubPath: process.env.GITHUB_PATH,
-      googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY
+      githubPath: process.env.GITHUB_PATH
     }
   },
   site: {
