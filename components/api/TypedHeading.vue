@@ -1,7 +1,7 @@
 <template>
   <div>
     <Typed :options="config" v-if="data">
-      <h1 class="m-0 font-heading font-normal xl:text-7xl md:text-6xl sm:text-5xl text-[9vw]">
+      <h1 class="m-0 font-heading font-normal xl:text-7xl md:text-6xl sm:text-5xl text-[10vw]">
         <span class="leading-tight"><span class="typing"></span><span class="text-accent">_</span></span>
       </h1>
     </Typed>

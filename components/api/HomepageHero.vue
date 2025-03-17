@@ -1,12 +1,9 @@
 <template>
-  <div class="homepage-hero relative mb-20 pt-20 pb-10">
+  <div class="homepage-hero relative mb-28 pt-20 pb-10">
     <Container class="relative">
       <div class="flex gap-20">
         <div class="flex-1 max-w-3xl">
-          <ListGroup
-            :items="['Web Design', 'App Development', 'SEO', 'IT Services']"
-            class="mb-5"
-            data-aos="fade-down" />
+          <ListGroup :items="['Web Design', 'App Development', 'SEO']" class="mb-5" data-aos="fade-down" />
 
           <TypedHeading slug="homepage-hero" class="mb-1" />
           <Callout data-aos="fade-right">

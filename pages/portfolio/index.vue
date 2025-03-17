@@ -6,7 +6,9 @@
       <FeaturedProjects />
     </Container>
 
-    <SlantedContainer></SlantedContainer>
+    <SlantedContainer>
+      <Heading label="Project archive" :muted="true" :cta="true" />
+    </SlantedContainer>
 
     <Container>
       <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">Open source collaboration</Heading>

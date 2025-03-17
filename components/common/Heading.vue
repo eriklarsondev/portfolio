@@ -3,7 +3,7 @@
     :class="[
       'mb-8 font-heading font-normal',
       {
-        'xl:text-7xl md:text-6xl sm:text-5xl text-[9vw]': !props.cta,
+        'xl:text-7xl md:text-6xl sm:text-5xl text-[10vw]': !props.cta,
         'text-zinc-800': props.muted,
         'md:text-[7rem] sm:text-[13vw] text-[18vw]': props.cta
       }

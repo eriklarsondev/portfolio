@@ -122,7 +122,7 @@ async function sendMessage() {
 
 <style lang="scss" scoped>
 label {
-  @apply block mb-1 uppercase tracking-widest font-medium text-xs text-accent;
+  @apply block mb-1 uppercase tracking-widest font-medium text-sm text-accent;
 }
 
 input:not([type='range']),

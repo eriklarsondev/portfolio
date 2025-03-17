@@ -1,7 +1,7 @@
 <template>
   <button
     type="submit"
-    class="inline-flex items-center relative h-[60px] px-8 overflow-hidden uppercase tracking-widest font-medium text-xs text-accent hover:text-black border-2 border-accent transition-all duration-300">
+    class="inline-flex items-center relative h-[60px] px-8 overflow-hidden uppercase tracking-widest font-medium text-sm text-accent hover:text-black border-2 border-accent transition-all duration-300">
     <span class="relative"><font-awesome icon="paper-plane" class="mr-1" /> Send a message</span>
   </button>
 </template>

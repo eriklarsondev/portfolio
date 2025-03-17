@@ -3,7 +3,9 @@
     <HomepageHero />
 
     <Container>
-      <Heading label="Let's build something great" class="text-center" data-aos="flip-left" />
+      <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">
+        Let's build <br class="xl:hidden block" />something great
+      </Heading>
 
       <LinkContainer label="Let's Work Together" url="/hire">
         <Services />
@@ -12,7 +14,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Technology expert" :muted="true" :cta="true" class="[&]:mb-1" data-aos="fade-down" />
+        <Heading label="Tech expert" :muted="true" :cta="true" class="[&]:mb-1" data-aos="fade-down" />
 
         <Callout :lighten="true" class="mb-8" data-aos="fade-left">
           <Content slug="tech-expert" />
