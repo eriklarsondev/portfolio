@@ -9,7 +9,7 @@
         </div>
 
         <div class="flex-1" data-aos="fade-left">
-          <Content slug="about-me" />
+          <Content slug="about-me" :long="true" />
         </div>
       </div>
     </Container>

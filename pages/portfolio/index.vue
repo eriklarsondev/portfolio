@@ -7,7 +7,8 @@
     </Container>
 
     <SlantedContainer>
-      <Heading label="Project archive" :muted="true" :cta="true" />
+      <Heading label="Project archive" :muted="true" :cta="true" data-aos="fade-right" />
+      <ProjectArchive />
     </SlantedContainer>
 
     <Container>

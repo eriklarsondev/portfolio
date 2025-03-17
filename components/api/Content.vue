@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content-block" v-if="data">
-      <div class="leading-7" v-html="data.content"></div>
+      <div :class="{ 'leading-7': !props.long, 'leading-9 font-serif': props.long }" v-html="data.content"></div>
     </div>
 
     <Error v-if="!data">{{ props.slug }} was not found</Error>
@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['slug'])
+const props = defineProps(['slug', 'long'])
 
 const { data } = await useFetch(`/api/content/${props.slug}`)
 </script>
