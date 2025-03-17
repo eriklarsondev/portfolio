@@ -51,6 +51,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vesp/nuxt-fontawesome',
     'nuxt-aos',
+    'nuxt-gtag',
     'vue3-carousel-nuxt'
   ],
   runtimeConfig: {
