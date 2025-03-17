@@ -6,7 +6,7 @@
           <h2 class="mb-1">
             <span class="text-accent">0{{ index + 1 }}.</span> {{ item.name }}
           </h2>
-          <span class="block xl:leading-6 sm:leading-7 leading-6 xl:text-sm sm:text-base text-sm">
+          <span class="block xl:leading-6 leading-7 xl:text-sm text-base">
             {{ item.description ? item.description : '&mdash;' }}
           </span>
         </Card>

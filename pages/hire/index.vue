@@ -21,7 +21,7 @@
 
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
-        <Heading label="Let's work together" class="[&]:mb-3" data-aos="flip-left" />
+        <Heading label="Let's work together" class="[&]:mb-1" data-aos="flip-left" />
         <Callout :lighten="true" class="mb-8" data-aos="fade-right">
           <Content slug="hire-me" />
         </Callout>

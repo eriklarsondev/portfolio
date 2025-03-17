@@ -8,11 +8,12 @@
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         :data-aos-delay="(index + 1) * 150">
         <div
-          class="image absolute top-0 left-0 w-full h-full bg-zinc-900/40 bg-blend-multiply bg-cover bg-center grayscale transition-all duration-500"
+          class="image absolute top-0 left-0 w-full h-full lg:bg-zinc-900/40 bg-zinc-900/60 bg-blend-multiply bg-cover bg-center grayscale transition-all duration-500"
           :style="{ backgroundImage: `url(${item.image.url})` }"
           v-if="item.image"></div>
 
-        <div class="top flex flex-col justify-end absolute top-0 left-0 w-full h-full p-6 transition-all duration-500">
+        <div
+          class="top lg:flex hidden flex-col justify-end absolute top-0 left-0 w-full h-full p-6 transition-all duration-500">
           <h2 class="mb-1 text-3xl">{{ item.name }}</h2>
           <Subheading :label="item.platform" class="[&]:m-0">
             <template v-slot:icon>
@@ -22,7 +23,7 @@
         </div>
 
         <div
-          class="bottom flex flex-col justify-end absolute top-full left-0 w-full h-full p-6 transition-all duration-500">
+          class="bottom flex flex-col justify-end absolute lg:top-full top-0 left-0 w-full h-full p-6 transition-all duration-500">
           <div>
             <ListGroup :items="item.technologies" class="mb-5" v-if="item.technologies" />
 
@@ -48,7 +49,7 @@ const { data } = await useFetch('/api/projects?featured=true')
 <style lang="scss" scoped>
 .project:hover {
   .image {
-    @apply bg-zinc-900/80;
+    @apply bg-zinc-900/60;
   }
 
   .top {
@@ -56,7 +57,7 @@ const { data } = await useFetch('/api/projects?featured=true')
   }
 
   .bottom {
-    @apply top-0 backdrop-blur;
+    @apply top-0 lg:backdrop-blur;
   }
 }
 </style>

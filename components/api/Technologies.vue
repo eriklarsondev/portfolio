@@ -15,11 +15,11 @@
             <div>
               <Subheading :label="item.name" class="[&]:mb-1 [&]:text-zinc-200" />
 
-              <span class="block mb-2 lg:leading-5 sm:leading-6 leading-5 lg:text-sm sm:text-base text-sm">
+              <span class="block mb-2 lg:leading-5 leading-6 lg:text-sm text-base">
                 {{ item.description ? item.description : '&mdash;' }}
               </span>
 
-              <NavLink label="Learn More" :url="item.url" :tab="true" class="[&]:text-accent" />
+              <NavLink :label="`Learn about ${item.name}`" :url="item.url" :tab="true" class="[&]:text-accent" />
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@
         </span>
 
         <h2 class="mb-1"><font-awesome icon="folder" class="mr-1 text-accent" /> {{ item.name }}</h2>
-        <p class="mb-4 xl:line-clamp-1 xl:leading-6 sm:leading-7 leading-6 xl:text-sm sm:text-base text-sm">
+        <p class="mb-4 xl:line-clamp-1 xl:leading-6 leading-7 xl:text-sm text-base">
           {{ item.description ? item.description : '&mdash;' }}
         </p>
 

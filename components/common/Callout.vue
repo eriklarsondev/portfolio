@@ -28,7 +28,7 @@ const props = defineProps(['lighten'])
   }
 
   p {
-    @apply sm:leading-7 leading-6 font-serif sm:text-base text-sm text-zinc-300;
+    @apply leading-7 font-serif text-zinc-300;
   }
 
   p:last-of-type {

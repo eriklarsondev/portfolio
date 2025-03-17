@@ -13,7 +13,7 @@
         'leading-tight': !props.cta,
         'lg:leading-none md:leading-[7rem] sm:leading-[13vw] leading-[18vw]': props.cta
       }">
-      <span v-if="props.label">{{ props.label }}<span class="text-accent" v-if="!props.muted">_</span></span>
+      <span v-if="props.label">{{ props.label }}<span class="text-accent" v-if="!props.muted">.</span></span>
       <slot v-if="!props.label" />
     </span>
   </h1>
