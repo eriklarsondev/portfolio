@@ -2,7 +2,7 @@
   <div>
     <PageHero slug="portfolio" />
 
-    <Container>
+    <Container class="[&]:max-w-[1600px]">
       <FeaturedProjects />
     </Container>
 

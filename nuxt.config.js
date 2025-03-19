@@ -30,8 +30,9 @@ export default defineNuxtConfig({
   fontawesome: {
     icons: {
       solid: [
-        'check-circle',
         'building-user',
+        'check-circle',
+        'clipboard',
         'folder',
         'laptop',
         'location-dot',

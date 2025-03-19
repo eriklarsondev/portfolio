@@ -7,6 +7,7 @@
             <font-awesome icon="terminal" />
           </template>
         </Subheading>
+
         <Heading :label="data.headline" class="[&]:m-0" data-aos="fade-right" />
 
         <UtilityMenu :items="data.controls" class="mt-10" v-if="data.controls && data.controls.length" />

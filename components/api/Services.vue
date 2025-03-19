@@ -9,6 +9,8 @@
           <span class="block xl:leading-6 leading-7 xl:text-sm text-base">
             {{ item.description ? item.description : '&mdash;' }}
           </span>
+
+          <NavLink label="Learn More" :url="`/services/${item.slug}`" class="mt-3 [&]:text-accent" />
         </Card>
       </div>
     </div>
