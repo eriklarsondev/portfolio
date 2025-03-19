@@ -7,7 +7,7 @@
       v-if="props.data.image"></div>
 
     <div
-      class="top lg:flex hidden flex-col justify-end absolute top-0 left-0 w-full h-full p-6 transition-all duration-500">
+      class="top lg:flex hidden flex-col justify-end absolute top-0 left-0 w-full h-full xl:p-10 p-6 transition-all duration-500">
       <h2 class="mb-1 text-3xl">{{ props.data.name }}</h2>
       <Subheading :label="props.data.platform" class="[&]:m-0">
         <template v-slot:icon>
@@ -17,16 +17,16 @@
     </div>
 
     <div
-      class="bottom flex flex-col justify-end absolute lg:top-full top-0 left-0 w-full h-full p-6 transition-all duration-500">
+      class="bottom flex flex-col justify-end absolute lg:top-full top-0 left-0 w-full h-full xl:p-10 p-6 transition-all duration-500">
       <div>
         <ListGroup :items="props.data.technologies" class="mb-5" v-if="props.data.technologies" />
 
         <Subheading :label="props.data.name" class="[&]:mb-1" />
-        <span class="block leading-6 text-zinc-300">
+        <span class="block leading-6 font-serif text-zinc-300">
           {{ props.data.description ? props.data.description : '&mdash;' }}
         </span>
 
-        <Button label="Learn More" :url="`/portfolio/${props.data.slug}`" class="mt-4" />
+        <Button label="Learn More" :url="`/portfolio/${props.data.slug}`" class="lg:mt-8 mt-5" />
       </div>
     </div>
   </div>
