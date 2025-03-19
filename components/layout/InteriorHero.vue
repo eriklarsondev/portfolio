@@ -8,12 +8,17 @@
       </Subheading>
 
       <Heading :label="props.headline" class="[&]:m-0" data-aos="fade-right" />
+
+      <div class="mt-8" data-aos="fade-up" v-if="slots.controls">
+        <slot name="controls" />
+      </div>
     </Container>
   </div>
 </template>
 
 <script setup>
 const props = defineProps(['heading', 'headline'])
+const slots = useSlots()
 </script>
 
 <style lang="scss" scoped>

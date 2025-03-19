@@ -1,6 +1,10 @@
 <template>
   <div>
-    <InteriorPageHero heading="Web services" :headline="data.name" />
+    <InteriorHero heading="Web services" :headline="data.name">
+      <template v-slot:controls>
+        <Button label="Let's work together" @click="scrollTo()" />
+      </template>
+    </InteriorHero>
 
     <Container>
       <div class="flex lg:flex-row flex-col gap-20">
@@ -22,14 +26,17 @@
       <Testimonials />
     </SlantedContainer>
 
-    <Container ref="anchor">
-      <CalendlyEmbed />
+    <Container>
+      <div ref="scroll">
+        <CalendlyEmbed />
+      </div>
     </Container>
   </div>
 </template>
 
 <script setup>
 const route = useRoute()
+const scroll = ref()
 
 const { data } = await useFetch(`/api/services/${route.params.slug}`)
 
@@ -39,4 +46,8 @@ useSeoMeta({
   } | Web Services`,
   description: data.value && data.value.seo ? data.value.seo.description : null
 })
+
+function scrollTo() {
+  scroll.value.scrollIntoView({ behavior: 'smooth' })
+}
 </script>

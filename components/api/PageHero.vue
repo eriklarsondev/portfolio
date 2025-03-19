@@ -10,7 +10,7 @@
 
         <Heading :label="data.headline" class="[&]:m-0" data-aos="fade-right" />
 
-        <UtilityMenu :items="data.controls" class="mt-10" v-if="data.controls && data.controls.length" />
+        <UtilityMenu :items="data.controls" class="mt-8" v-if="data.controls && data.controls.length" />
       </div>
 
       <Error v-if="!data">{{ props.slug }} was not found</Error>
