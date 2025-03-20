@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['heading', 'headline'])
+const props = defineProps(['image', 'heading', 'headline'])
 const slots = useSlots()
 </script>
 

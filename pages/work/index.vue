@@ -13,7 +13,8 @@
         Project <span class="sm:inline hidden">& client</span> spotlight
       </Heading>
 
-      <FeaturedProjects />
+      <ProjectCarousel />
     </Container>
   </div>
 </template>
+ss
