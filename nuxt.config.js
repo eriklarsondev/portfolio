@@ -33,6 +33,7 @@ export default defineNuxtConfig({
         'building-user',
         'check-circle',
         'clipboard',
+        'code',
         'folder',
         'laptop',
         'location-dot',

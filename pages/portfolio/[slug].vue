@@ -1,6 +1,6 @@
 <template>
   <div>
-    <InteriorHero :image="data.image" heading="Portfolio" :headline="data.name">
+    <InteriorHero :image="data.image" heading="Portfolio" :headline="data.name" :description="data.description">
       <template v-slot:controls>
         <Button label="Let's work together" @click="scrollTo()" />
       </template>
@@ -16,14 +16,22 @@
           </Subheading>
 
           <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="leading-9 font-serif" v-html="data.description"></div>
+            <div class="leading-8 font-serif" v-html="data.content"></div>
           </div>
         </div>
 
         <div class="xl:w-[500px] lg:w-[400px] w-full">
-          <Image :data="data.image" class="lg:-mt-40 mb-10" data-aos="fade-left" v-if="data.image" />
+          <Image :data="data.image" class="lg:-mt-28 mb-10" data-aos="fade-left" v-if="data.image" />
 
-          <ListGroup :items="data.technologies" data-aos="fade-down" />
+          <Subheading label="Technologies" class="[&]:mb-1" data-aos="fade-right" :data-aos-delay="1000">
+            <template v-slot:icon>
+              <font-awesome icon="code" />
+            </template>
+          </Subheading>
+
+          <ListGroup :items="data.technologies" data-aos="fade-left" />
+
+          <Button label="View project" :url="data.url" :tab="true" class="mt-10" data-aos="fade-up" v-if="data.url" />
         </div>
       </div>
     </Container>

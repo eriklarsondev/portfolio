@@ -1,13 +1,13 @@
 <template>
   <div>
-    <InteriorHero heading="Web services" :headline="data.name">
+    <InteriorHero heading="Web services" :headline="data.name" :description="data.description" :short="true">
       <template v-slot:controls>
         <Button label="Let's work together" @click="scrollTo()" />
       </template>
     </InteriorHero>
 
     <Container>
-      <div class="flex lg:flex-row flex-col gap-20">
+      <div class="flex lg:flex-row flex-col gap-10">
         <div class="flex-1">
           <Subheading label="At a glance" class="[&]:mb-1" data-aos="fade-down" :data-aos-delay="1000">
             <template v-slot:icon>
@@ -15,10 +15,16 @@
             </template>
           </Subheading>
 
-          <div class="leading-9 font-serif" v-html="data.content" data-aos="fade-right" :data-aos-delay="1000"></div>
+          <div data-aos="fade-right" :data-aos-delay="1000">
+            <div class="leading-9 lg:text-justify font-serif" v-html="data.content"></div>
+          </div>
         </div>
 
-        <div class="lg:w-64 w-full"></div>
+        <div class="lg:w-[350px] w-full">
+          <Subheading label="Web Services" class="opacity-0" />
+
+          <VerticalMenu :items="data.relatedServices" base="services" data-aos="fade-left" />
+        </div>
       </div>
     </Container>
 

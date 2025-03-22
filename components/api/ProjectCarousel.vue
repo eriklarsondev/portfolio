@@ -13,8 +13,23 @@ const { data } = await useFetch('/api/projects?featured=true')
 
 const config = {
   itemsToShow: 2,
-  gap: 30,
-  autoplay: 5000,
-  wrapAround: true
+  gap: 20,
+  autoplay: 3000,
+  pauseAutoplayOnHover: true,
+  wrapAround: true,
+  breakpoints: {
+    0: {
+      itemsToShow: 1
+    },
+    968: {
+      itemsToShow: 1.25
+    },
+    1024: {
+      itemsToShow: 1.5
+    },
+    1280: {
+      itemsToShow: 2
+    }
+  }
 }
 </script>

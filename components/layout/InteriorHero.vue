@@ -7,7 +7,17 @@
         </template>
       </Subheading>
 
-      <Heading :label="props.headline" class="[&]:m-0" data-aos="fade-right" />
+      <Heading :label="props.headline" class="[&]:m-0" data-aos="flip-left" />
+
+      <span
+        :class="[
+          'block -mt-2 lg:leading-10 md:leading-9 leading-8 font-serif md:text-2xl text-lg',
+          { 'md:max-w-4xl max-w-full': props.short }
+        ]"
+        data-aos="fade-right"
+        v-if="props.description">
+        {{ props.description }}
+      </span>
 
       <div class="mt-8" data-aos="fade-up" v-if="slots.controls">
         <slot name="controls" />
@@ -17,7 +27,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['image', 'heading', 'headline'])
+const props = defineProps(['image', 'heading', 'headline', 'description', 'short'])
 const slots = useSlots()
 </script>
 
