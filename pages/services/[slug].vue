@@ -2,7 +2,7 @@
   <div>
     <InteriorHero heading="Web services" :headline="data.name" :description="data.description" :short="true">
       <template v-slot:controls>
-        <Button label="Let's work together" @click="scrollTo()" />
+        <Button label="Schedule a meeting" @click="scrollTo()" />
       </template>
     </InteriorHero>
 

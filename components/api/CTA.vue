@@ -12,7 +12,7 @@
 
       <div class="flex justify-center md:items-end items-center lg:absolute w-full h-full top-0 left-0">
         <Container class="relative py-20 sm:text-center">
-          <Heading :cta="true" class="heading relative [&]:m-0" data-aos="fade-down" v-if="data.heading">
+          <Heading :cta="true" class="[&]:m-0" data-aos="fade-down" v-if="data.heading">
             <div v-html="data.heading"></div>
           </Heading>
 
@@ -30,12 +30,3 @@ const props = defineProps(['slug'])
 
 const { data } = await useFetch(`/api/cta/${props.slug}`)
 </script>
-
-<style lang="scss" scoped>
-.heading::before {
-  @apply lg:block hidden absolute content-[''] bottom-[calc(100%_+_30px)] left-0 w-full h-screen;
-
-  background-image: radial-gradient(circle at 1px 1px, #d4d4d8 1px, transparent 0);
-  background-size: 30px 30px;
-}
-</style>
