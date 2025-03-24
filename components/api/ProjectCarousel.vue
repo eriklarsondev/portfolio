@@ -9,7 +9,14 @@
 </template>
 
 <script setup>
-const { data } = await useFetch('/api/projects?featured=true')
+const route = useRoute()
+
+let url = '/api/projects?featured=true'
+if (route.params.slug) {
+  url += `&skip=${route.params.slug}`
+}
+
+const { data } = await useFetch(url)
 
 const config = {
   itemsToShow: 2,
