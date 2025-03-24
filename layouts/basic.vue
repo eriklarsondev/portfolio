@@ -2,7 +2,7 @@
   <div>
     <AppHeader />
 
-    <div class="mb-20">
+    <div>
       <slot />
     </div>
 
