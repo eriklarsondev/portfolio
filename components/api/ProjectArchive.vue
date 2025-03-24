@@ -5,7 +5,7 @@
         v-for="(item, index) in data"
         :key="index"
         class="[&]:bg-zinc-800/50 backdrop-blur [&]:border-zinc-800"
-        data-aos="fade-down"
+        data-aos="zoom-in"
         :data-aos-delay="(index + 1) * 150">
         <ListGroup :items="item.technologies" class="mb-3" />
 

@@ -6,6 +6,8 @@
       <slot />
     </div>
 
+    <RecentPostsContainer />
+
     <LeadContainer />
 
     <AppFooter />
