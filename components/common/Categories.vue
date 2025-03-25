@@ -13,3 +13,9 @@
 <script setup>
 const props = defineProps(['items'])
 </script>
+
+<style lang="scss" scoped>
+a.router-link-active {
+  @apply text-accent;
+}
+</style>

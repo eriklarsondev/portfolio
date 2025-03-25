@@ -6,7 +6,7 @@
       <slot />
     </div>
 
-    <RecentPostsContainer />
+    <RecentPosts />
 
     <LeadContainer />
 
