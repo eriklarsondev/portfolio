@@ -27,6 +27,9 @@ export default defineNuxtConfig({
   buildDir: 'nuxt-dist',
   components: [{ path: '~/components/api' }, { path: '~/components/common' }, { path: '~/components/layout' }],
   devtools: { enabled: true },
+  disqus: {
+    shortname: process.env.NUXT_DISQUS_SHORTNAME
+  },
   fontawesome: {
     icons: {
       solid: [
@@ -53,6 +56,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vesp/nuxt-fontawesome',
     'nuxt-aos',
+    'nuxt-disqus',
     'nuxt-gtag',
     'vue3-carousel-nuxt'
   ],

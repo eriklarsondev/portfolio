@@ -14,6 +14,10 @@
           </div>
 
           <div class="leading-8" v-html="data.content"></div>
+
+          <div class="mt-20">
+            <DisqusComments :identifier="`/blog/${data.slug}`" />
+          </div>
         </div>
 
         <div class="lg:w-[350px] w-full">
