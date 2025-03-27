@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project relative xl:h-[30vw] lg:h-96 md:h-[50vw] sm:h-[70vw] h-auto sm:max-h-[500px] overflow-hidden bg-zinc-900 rounded-3xl">
+    class="project relative xl:h-[30vw] lg:h-96 md:h-[50vw] sm:h-[70vw] h-auto sm:max-h-[500px] overflow-hidden bg-zinc-900 rounded-sm">
     <div
       class="image absolute top-0 left-0 w-full h-full lg:bg-zinc-900/40 bg-zinc-900/70 bg-blend-multiply bg-cover bg-center grayscale transition-all duration-500"
       :style="{ backgroundImage: `url(${props.data.image.url})` }"

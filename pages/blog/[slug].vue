@@ -13,7 +13,9 @@
             <div></div>
           </div>
 
-          <div class="leading-8" v-html="data.content"></div>
+          <div data-aos="fade-right" :data-aos-delay="1000">
+            <div class="leading-8" v-html="data.content"></div>
+          </div>
 
           <div class="mt-20">
             <DisqusComments :identifier="`/blog/${data.slug}`" />
