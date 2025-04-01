@@ -25,6 +25,8 @@
     <Container class="mb-20">
       <CalendlyEmbed />
     </Container>
+
+    <RecentPosts />
   </div>
 </template>
 
