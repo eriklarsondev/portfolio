@@ -10,6 +10,7 @@
       <Heading :muted="true" :cta="true" class="sm:text-center" data-aos="flip-left">
         Following the<br />digital project lifecycle
       </Heading>
+
       <Strategies />
     </Container>
 
