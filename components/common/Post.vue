@@ -27,7 +27,7 @@ const props = defineProps(['data'])
 const published = ref({ month: null, day: null, year: null })
 
 onMounted(() => {
-  const date = new Date(props.data.publishedAt)
+  const date = new Date(props.data.published)
 
   published.value.month = date.toLocaleDateString('en-US', { month: 'short' })
   published.value.day = date.toLocaleDateString('en-US', { day: '2-digit' })
