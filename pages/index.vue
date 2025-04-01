@@ -4,7 +4,7 @@
 
     <Container>
       <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">
-        Let's build <br class="xl:hidden block" />something great
+        Let's build <br class="xl:hidden block" />something amazing
       </Heading>
 
       <LinkContainer label="Let's Work Together" url="/hire">

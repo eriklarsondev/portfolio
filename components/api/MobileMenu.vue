@@ -10,7 +10,7 @@
 
     <div
       :class="[
-        'fixed z-50 top-[70px] w-full h-[calc(100vh_-_70px)] p-8 overflow-y-auto bg-black transition-all duration-1000',
+        'fixed z-50 top-[70px] w-full h-[calc(100vh_-_70px)] px-10 py-20 overflow-y-auto bg-black transition-all duration-1000',
         { 'left-full delay-700': !toggle, 'left-0': toggle }
       ]">
       <ul>
@@ -18,11 +18,11 @@
           v-for="(item, index) in data.items"
           :key="index"
           @click.prevent="toggleMenu()"
-          :class="['block', { 'sm:mb-[10vw] mb-[13vw]': index < data.items.length - 1 }]">
+          :class="['block sm:text-center text-left', { 'sm:mb-[10vw] mb-[14vw]': index < data.items.length - 1 }]">
           <NuxtLink
             :to="item.url"
             :target="!item.newTab ? '_self' : '_blank'"
-            class="menu-item relative font-heading font-normal md:text-[16vw] sm:text-[18vw] text-[22vw] text-zinc-300 hover:text-white transition-all duration-300">
+            class="menu-item relative font-heading font-normal md:text-[16vw] sm:text-[18vw] text-[24vw] text-zinc-700 hover:text-zinc-500 transition-all duration-300">
             {{ item.label }}
           </NuxtLink>
         </li>

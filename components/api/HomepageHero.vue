@@ -15,9 +15,9 @@
               <Button label="Let's connect" url="/contact" data-aos="fade-up" />
             </div>
 
-            <div>|</div>
+            <div class="sm:block hidden">|</div>
 
-            <div>
+            <div class="sm:block hidden">
               <SocialMediaBar />
             </div>
           </div>
