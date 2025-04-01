@@ -13,17 +13,15 @@
     </Container>
 
     <SlantedContainer>
-      <div class="max-w-3xl mx-auto">
-        <Heading label="Tech expert" :muted="true" :cta="true" class="[&]:mb-1" data-aos="fade-down" />
+      <div class="max-w-5xl mx-auto">
+        <Heading label="Technology expert" :muted="true" :cta="true" class="[&]:mb-1" data-aos="fade-down" />
 
         <Callout :lighten="true" class="mb-8" data-aos="fade-left">
           <Content slug="tech-expert" />
         </Callout>
 
-        <Separator :lighten="true" class="[&]:my-[3rem]" />
+        <Technologies class="max-w-5xl mx-auto" />
       </div>
-
-      <Technologies class="max-w-5xl mx-auto" />
     </SlantedContainer>
 
     <Container>
