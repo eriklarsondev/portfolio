@@ -8,7 +8,8 @@
           <Articles :data="data.articles" v-if="data.articles && data.articles.length" />
 
           <div class="leading-9 font-serif text-2xl" data-aos="fade-up" v-if="!data.articles || !data.articles.length">
-            <font-awesome icon="triangle-exclamation" class="text-accent" /> {{ data.name }} does not have any articles
+            <font-awesome icon="triangle-exclamation" class="text-accent" /> Category "{{ data.name }}" does not have
+            any articles
           </div>
         </div>
 

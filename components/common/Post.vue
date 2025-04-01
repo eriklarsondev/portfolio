@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="post-date relative w-[120px]">
       <div class="inline-flex flex-col text-center">
-        <span class="uppercase font-serif text-2xl text-zinc-200">{{ published.month }}</span>
+        <span class="uppercase font-serif text-2xl text-white">{{ published.month }}</span>
         <span class="font-serif text-5xl text-accent">{{ published.day }}</span>
         <span class="post-year relative mt-1 py-[0.075rem]">
           <span class="relative -top-[1px] font-normal text-sm text-zinc-500">{{ published.year }}</span>

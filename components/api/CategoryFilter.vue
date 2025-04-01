@@ -7,7 +7,7 @@
         <div v-for="(item, index) in data" :key="index" data-aos="zoom-in" :data-aos-delay="(index + 1) * 150">
           <NuxtLink
             :to="`/category/${item.slug}`"
-            class="inline-flex items-center h-[30px] px-3 uppercase tracking-widest bg-zinc-900 font-medium text-[11px] rounded">
+            class="inline-flex items-center h-[30px] px-3 uppercase tracking-widest bg-zinc-900 hover:bg-zinc-700 font-medium text-[11px] rounded transition-all duration-150">
             {{ item.name }}
           </NuxtLink>
         </div>

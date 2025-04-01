@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 export default {
   theme: {
@@ -12,7 +13,7 @@ export default {
     },
     extend: {
       colors: {
-        accent: '#cfc493'
+        accent: colors.cyan[200]
       },
       fontFamily: {
         heading: ['Bebas Neue', ...defaultTheme.fontFamily.sans],

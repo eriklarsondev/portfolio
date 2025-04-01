@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     icons: {
       solid: [
         'building-user',
+        'calendar-day',
         'check-circle',
         'clipboard',
         'code',

@@ -21,6 +21,6 @@ const props = defineProps(['items', 'base'])
 
 <style lang="scss" scoped>
 ul::before {
-  @apply absolute content-[''] top-0 left-0 w-1 h-full bg-zinc-700 rounded-full;
+  @apply absolute content-[''] top-0 left-0 w-1 h-full bg-zinc-900 rounded-full;
 }
 </style>

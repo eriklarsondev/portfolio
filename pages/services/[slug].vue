@@ -21,7 +21,7 @@
         </div>
 
         <div class="lg:w-[350px] w-full">
-          <Subheading label="Web Services" class="opacity-0" />
+          <Subheading label="Web services" class="opacity-0" />
 
           <VerticalMenu :items="data.relatedServices" base="services" data-aos="fade-left" />
         </div>

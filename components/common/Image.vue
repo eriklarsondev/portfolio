@@ -8,7 +8,7 @@
       }
     ]">
     <div
-      :class="['relative z-10 bg-accent/50 bg-blend-multiply bg-cover', { 'rounded-full': props.rounded }]"
+      :class="['relative z-10 bg-cover grayscale', { 'rounded-full': props.rounded }]"
       :style="{ backgroundImage: `url(${props.data.url})` }">
       <img :src="props.data.url" :alt="props.data.alternativeText" class="opacity-0" />
     </div>

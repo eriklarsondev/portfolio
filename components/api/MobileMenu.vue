@@ -18,11 +18,11 @@
           v-for="(item, index) in data.items"
           :key="index"
           @click.prevent="toggleMenu()"
-          :class="['block text-center', { 'md:mb-[9vw] sm:mb-[14vw] mb-[16vw]': index < data.items.length - 1 }]">
+          :class="['block', { 'sm:mb-[10vw] mb-[13vw]': index < data.items.length - 1 }]">
           <NuxtLink
             :to="item.url"
             :target="!item.newTab ? '_self' : '_blank'"
-            class="menu-item relative font-serif font-thin sm:text-[12vw] text-[17vw] text-zinc-300 hover:text-zinc-200 transition-all duration-300">
+            class="menu-item relative font-heading font-normal md:text-[16vw] sm:text-[18vw] text-[22vw] text-zinc-300 hover:text-white transition-all duration-300">
             {{ item.label }}
           </NuxtLink>
         </li>

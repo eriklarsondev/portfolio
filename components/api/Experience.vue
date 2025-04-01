@@ -20,7 +20,7 @@
         </div>
 
         <div
-          :class="['flex-1 job relative', { left: index % 2 === 0, right: index % 2 !== 0 }]"
+          :class="['flex-1', { left: index % 2 === 0, right: index % 2 !== 0 }]"
           :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
           :data-aos-delay="(index + 1) * 150">
           <div class="flex items-center mb-1">
@@ -72,19 +72,5 @@ const { data } = await useFetch('/api/work')
 <style lang="scss" scoped>
 .experience-timeline::before {
   @apply lg:block hidden absolute content-[''] top-0 left-[calc(50%_-_1px)] w-[2px] h-full bg-zinc-900 rounded-full;
-}
-
-.job {
-  &::before {
-    @apply lg:block hidden absolute content-[''] top-0 w-2 h-full bg-zinc-900 rounded-full;
-  }
-
-  &.left::before {
-    @apply -left-7;
-  }
-
-  &.right::before {
-    @apply -right-7;
-  }
 }
 </style>

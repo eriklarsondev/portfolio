@@ -57,7 +57,10 @@
     </form>
 
     <div ref="scroll">
-      <div class="mt-10 p-6 text-center bg-accent/20 border-2 border-dotted border-accent" v-if="success">
+      <div
+        class="mt-10 p-6 text-center bg-accent/20 border-2 border-dotted border-accent"
+        data-aos="flip-left"
+        v-if="success">
         <font-awesome icon="circle-check" class="mb-3 text-3xl text-accent"></font-awesome>
         <Subheading label="Your message has been received" class="[&]:m-0" />
       </div>
@@ -129,7 +132,7 @@ input:not([type='range']),
 select,
 textarea {
   @apply w-full h-[60px] px-3 bg-zinc-900 text-zinc-200 border-2 border-transparent rounded-sm outline-none appearance-none;
-  @apply focus:bg-accent/30 focus:border-accent transition-all duration-300;
+  @apply focus:bg-accent/20 focus:border-accent transition-all duration-300;
 
   &::placeholder {
     @apply text-zinc-500;
@@ -144,9 +147,9 @@ input[type='range'] {
   }
 
   &::-webkit-slider-thumb {
-    @apply w-[25px] h-[25px] bg-zinc-200 rounded-sm appearance-none;
+    @apply w-[25px] h-[25px] bg-white rounded-sm appearance-none;
 
-    box-shadow: -100vw 0 0 99vw #cfc493;
+    box-shadow: -100vw 0 0 99vw #a5f3fc;
   }
 }
 
@@ -158,7 +161,7 @@ form.lighten {
   input,
   textarea,
   select {
-    @apply bg-zinc-800 focus:bg-accent/30;
+    @apply bg-zinc-800 focus:bg-accent/20;
   }
 
   input[type='range']::-webkit-slider-runnable-track {

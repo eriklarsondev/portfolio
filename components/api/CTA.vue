@@ -8,7 +8,7 @@
         :style="{ backgroundImage: `url(${data.image.url})` }"
         v-if="data.image"></div>
 
-      <div class="absolute top-0 left-0 w-full h-full bg-black/40" v-if="data.image"></div>
+      <div class="absolute top-0 left-0 w-full h-full bg-black/50" v-if="data.image"></div>
 
       <div class="flex justify-center md:items-end items-center lg:absolute w-full h-full top-0 left-0">
         <Container class="relative py-20 sm:text-center">
