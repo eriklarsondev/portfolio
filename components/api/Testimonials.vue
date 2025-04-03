@@ -10,7 +10,7 @@
         <Carousel v-bind="config" class="relative">
           <Slide v-for="(item, index) in data" :key="index" class="flex-col">
             <div
-              class="testimonial relative pl-5 lg:leading-9 leading-8 font-serif font-extralight italic lg:text-xl text-lg text-neutral-200"
+              class="testimonial relative pl-5 lg:leading-9 leading-8 tracking-wide font-serif font-extralight italic lg:text-xl text-lg text-neutral-200"
               v-html="item.content"></div>
 
             <div class="flex items-center gap-2 mt-5">

@@ -7,7 +7,7 @@
     </InteriorHero>
 
     <Container>
-      <div class="flex lg:flex-row flex-col gap-20">
+      <div class="flex lg:flex-row flex-col xl:gap-28 gap-20">
         <div class="flex-1">
           <Subheading label="At a glance" class="[&]:mb-1" data-aos="fade-down" :data-aos-delay="1000">
             <template v-slot:icon>
@@ -16,12 +16,15 @@
           </Subheading>
 
           <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="leading-9 font-normal" v-html="data.content"></div>
+            <div class="lg:text-justify leading-9 tracking-wide font-serif" v-html="data.content"></div>
           </div>
         </div>
 
         <div class="lg:w-[350px] w-full">
           <Subheading label="Web services" class="lg:block hidden opacity-0" />
+          <Heading :muted="true" :cta="true" class="lg:hidden block [&]:mb-5" data-aos="fade-right">
+            Web services
+          </Heading>
 
           <VerticalMenu :items="data.relatedServices" base="services" data-aos="fade-left" />
         </div>

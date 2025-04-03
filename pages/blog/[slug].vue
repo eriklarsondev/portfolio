@@ -3,7 +3,7 @@
     <InteriorHero heading="Insights" :headline="data.name" />
 
     <Container class="mb-20">
-      <div class="flex lg:flex-row flex-col gap-20">
+      <div class="flex lg:flex-row flex-col xl:gap-28 gap-20">
         <div class="flex-1">
           <div class="flex items-center mb-5">
             <div class="flex-1 sm:block hidden">
@@ -23,7 +23,7 @@
           </div>
 
           <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="leading-9 font-normal" v-html="data.content"></div>
+            <div class="lg:text-justify leading-9 tracking-wide font-serif" v-html="data.content"></div>
           </div>
 
           <div class="mt-20">
