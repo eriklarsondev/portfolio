@@ -4,7 +4,7 @@
       <Card
         v-for="(item, index) in data"
         :key="index"
-        class="[&]:bg-zinc-800/50 backdrop-blur [&]:border-zinc-800"
+        class="bg-zinc-800/50"
         data-aos="zoom-in"
         :data-aos-delay="(index + 1) * 150">
         <ListGroup :items="item.technologies" class="mb-3" />

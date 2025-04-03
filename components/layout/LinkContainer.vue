@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div class="link-container relative py-10">
-      <slot />
-    </div>
+    <slot />
 
-    <div class="mt-10 text-center" data-aos="zoom-in-up">
+    <div class="mt-20 text-center" data-aos="zoom-in-up">
       <Button :label="props.label" :url="props.url" :tab="props.tab" />
     </div>
   </div>
@@ -13,9 +11,3 @@
 <script setup>
 const props = defineProps(['label', 'url', 'tab'])
 </script>
-
-<style lang="scss" scoped>
-.link-container::before {
-  @apply absolute content-[''] top-0 left-[calc(50%_-_1px)] w-[2px] h-full bg-zinc-900 rounded-full;
-}
-</style>

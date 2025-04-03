@@ -13,7 +13,7 @@ export default {
     },
     extend: {
       colors: {
-        accent: colors.cyan[200]
+        accent: '#cfc493'
       },
       fontFamily: {
         heading: ['Bebas Neue', ...defaultTheme.fontFamily.sans],

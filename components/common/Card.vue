@@ -1,5 +1,5 @@
 <template>
-  <div class="card relative p-6 bg-black border-2 border-zinc-900">
+  <div class="card relative p-6 border-2 border-zinc-900">
     <slot />
   </div>
 </template>

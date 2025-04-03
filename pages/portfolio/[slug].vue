@@ -16,7 +16,7 @@
           </Subheading>
 
           <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="leading-9 tracking-wide text-[15px]" v-html="data.content"></div>
+            <div class="leading-9 font-normal" v-html="data.content"></div>
           </div>
         </div>
 

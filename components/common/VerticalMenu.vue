@@ -1,5 +1,5 @@
 <template>
-  <ul class="relative sm:pl-10 pl-6">
+  <ul>
     <li v-for="(item, index) in props.items" :key="index" class="block relative">
       <div>
         <h4 class="m-0">{{ item.name }}</h4>
@@ -18,9 +18,3 @@
 <script setup>
 const props = defineProps(['items', 'base'])
 </script>
-
-<style lang="scss" scoped>
-ul::before {
-  @apply absolute content-[''] top-0 left-0 w-1 h-full bg-zinc-900 rounded-full;
-}
-</style>

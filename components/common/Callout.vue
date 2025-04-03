@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'callout relative sm:ml-3 sm:p-5 p-4 backdrop-blur',
+      'callout relative sm:ml-3 sm:p-5 p-4',
       { 'bg-zinc-900': !props.lighten, 'lighten bg-zinc-800': props.lighten }
     ]">
     <slot />

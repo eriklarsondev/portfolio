@@ -4,7 +4,7 @@
       <Container>
         <div class="flex items-center gap-7 h-[70px]">
           <div class="flex-1">
-            <Logo src="https://res.cloudinary.com/dst50wvgy/image/upload/v1743522179/logo_7136b0bd54.svg" />
+            <Logo src="https://res.cloudinary.com/dst50wvgy/image/upload/v1743626347/logo_7136b0bd54.svg" />
           </div>
 
           <div class="lg:block hidden">

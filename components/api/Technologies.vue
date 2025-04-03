@@ -6,7 +6,7 @@
         :key="index"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         :data-aos-delay="(index + 1) * 150">
-        <div class="tech relative p-6 bg-zinc-800/50 backdrop-blur border-2 border-zinc-800 rounded-sm">
+        <div class="tech relative p-6 bg-zinc-800/50 rounded-md">
           <div class="flex sm:flex-row flex-col gap-5">
             <div class="sm:block hidden">
               <i :class="['rounded-xl text-5xl text-accent', item.icon]"></i>

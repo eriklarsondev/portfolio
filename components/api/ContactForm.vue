@@ -147,9 +147,9 @@ input[type='range'] {
   }
 
   &::-webkit-slider-thumb {
-    @apply w-[25px] h-[25px] bg-white rounded-sm appearance-none;
+    @apply w-[25px] h-[25px] bg-white rounded-full appearance-none;
 
-    box-shadow: -100vw 0 0 99vw #a5f3fc;
+    box-shadow: -100vw 0 0 99vw #cfc493;
   }
 }
 
