@@ -2,7 +2,7 @@
   <div>
     <div class="content-block" v-if="data">
       <div
-        :class="{ 'leading-7': !props.long, 'leading-9 tracking-wide font-serif': props.long }"
+        :class="{ 'leading-7': !props.long, 'lg:text-justify leading-9 tracking-wide font-serif': props.long }"
         v-html="data.content"></div>
     </div>
 
