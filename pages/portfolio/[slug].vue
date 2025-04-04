@@ -15,9 +15,7 @@
             </template>
           </Subheading>
 
-          <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="lg:text-justify leading-9 tracking-wide font-serif" v-html="data.content"></div>
-          </div>
+          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
         </div>
 
         <div class="xl:w-[500px] lg:w-[400px] w-full">

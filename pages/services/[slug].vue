@@ -7,7 +7,7 @@
     </InteriorHero>
 
     <Container>
-      <div class="flex lg:flex-row flex-col xl:gap-28 gap-20">
+      <div class="flex lg:flex-row flex-col gap-20">
         <div class="flex-1">
           <Subheading label="At a glance" class="[&]:mb-1" data-aos="fade-down" :data-aos-delay="1000">
             <template v-slot:icon>
@@ -15,9 +15,7 @@
             </template>
           </Subheading>
 
-          <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="lg:text-justify leading-9 tracking-wide font-serif" v-html="data.content"></div>
-          </div>
+          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
         </div>
 
         <div class="lg:w-[350px] w-full">

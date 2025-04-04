@@ -38,6 +38,7 @@ export default defineNuxtConfig({
         'check-circle',
         'clipboard',
         'code',
+        'file-lines',
         'folder',
         'laptop',
         'location-dot',

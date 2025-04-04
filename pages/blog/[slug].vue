@@ -1,30 +1,14 @@
 <template>
   <div>
-    <InteriorHero heading="Insights" :headline="data.name" />
+    <InteriorHero
+      heading="Insights"
+      :headline="data.name"
+      :description="`${published.month} ${published.day}, ${published.year}`" />
 
     <Container class="mb-20">
-      <div class="flex lg:flex-row flex-col xl:gap-28 gap-20">
+      <div class="flex lg:flex-row flex-col gap-20">
         <div class="flex-1">
-          <div class="flex items-center mb-5">
-            <div class="flex-1 sm:block hidden">
-              <Categories :items="data.categories" data-aos="fade-down" />
-            </div>
-
-            <div>
-              <Subheading
-                :label="`${published.month} ${published.day}, ${published.year}`"
-                :muted="true"
-                data-aos="fade-right">
-                <template v-slot:icon>
-                  <font-awesome icon="calendar-day" class="text-accent" />
-                </template>
-              </Subheading>
-            </div>
-          </div>
-
-          <div data-aos="fade-right" :data-aos-delay="1000">
-            <div class="lg:text-justify leading-9 tracking-wide font-serif" v-html="data.content"></div>
-          </div>
+          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
 
           <div class="mt-20">
             <DisqusComments :identifier="`/blog/${data.slug}`" />
