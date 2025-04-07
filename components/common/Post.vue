@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div class="post-date sm:block hidden relative w-[120px]">
+    <div class="post-date sm:block hidden relative w-[120px]" v-if="!props.condensed">
       <div class="inline-flex flex-col text-center">
         <span class="uppercase font-serif text-2xl text-white">{{ published.month }}</span>
         <span class="font-serif text-5xl text-accent">{{ published.day }}</span>
@@ -13,17 +13,22 @@
     <div class="flex-1">
       <Categories :items="props.data.categories" class="mb-3" v-if="props.data.categories" />
 
-      <h2 class="mb-1 text-3xl">{{ props.data.name }}</h2>
+      <h2 :class="['mb-1', { 'text-3xl': !props.condensed, 'lg:line-clamp-1 text-2xl': props.condensed }]">
+        {{ props.data.name }}
+      </h2>
+
       <Subheading
         :label="`${published.month} ${published.day}, ${published.year}`"
         :muted="true"
-        class="sm:hidden block">
+        :class="{ 'sm:hidden block': !props.condensed }">
         <template v-slot:icon>
           <font-awesome icon="calendar-day" class="text-accent" />
         </template>
       </Subheading>
 
-      <span class="block mb-5 leading-7">{{ props.data.excerpt ? props.data.excerpt : '&mdash;' }}</span>
+      <p :class="['mb-5 leading-7', { 'lg:line-clamp-2': props.condensed }]">
+        {{ props.data.excerpt ? props.data.excerpt : '&mdash;' }}
+      </p>
 
       <Button label="Read More" :url="`/blog/${props.data.slug}`" />
     </div>
@@ -31,7 +36,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['data'])
+const props = defineProps(['data', 'condensed'])
 
 const published = ref({ month: null, day: null, year: null })
 

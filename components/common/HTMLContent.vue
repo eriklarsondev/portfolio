@@ -1,5 +1,5 @@
 <template>
-  <div class="leading-9">
+  <div class="lg:text-justify leading-9 tracking-wide text-zinc-300">
     <div v-html="props.html"></div>
   </div>
 </template>

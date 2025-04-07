@@ -3,7 +3,7 @@ export default defineEventHandler(async event => {
 
   const query = getQuery(event)
 
-  const articles = await $fetch(`${config.basePath}/articles?featured=${query.limit}`, {
+  const articles = await $fetch(`${config.basePath}/articles?limit=${query.limit}`, {
     headers: {
       authorization: `Bearer ${config.apiToken}`
     }

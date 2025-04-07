@@ -21,6 +21,7 @@
     "nuxt-aos": "^1.2.5",
     "nuxt-disqus": "^1.1.1",
     "nuxt-gtag": "^3.0.2",
+    "prismjs": "^1.30.0",
     "vue": "latest",
     "vue-router": "latest",
     "vue3-carousel-nuxt": "^1.1.5"

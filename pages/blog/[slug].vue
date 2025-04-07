@@ -20,10 +20,15 @@
         </div>
       </div>
     </Container>
+
+    <PostNavigation :prev="data.nav[0]" :next="data.nav[1]" />
   </div>
 </template>
 
 <script setup>
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-okaidia.min.css'
+
 const route = useRoute()
 const published = ref({ month: null, day: null, year: null })
 
@@ -35,6 +40,8 @@ onMounted(() => {
   published.value.month = date.toLocaleDateString('en-US', { month: 'long' })
   published.value.day = date.toLocaleDateString('en-US', { day: 'numeric' })
   published.value.year = date.toLocaleDateString('en-US', { year: 'numeric' })
+
+  Prism.highlightAll()
 })
 
 useSeoMeta({
@@ -46,3 +53,9 @@ useSeoMeta({
 
 definePageMeta({ layout: 'basic' })
 </script>
+
+<style lang="scss">
+pre {
+  @apply my-5 #{!important};
+}
+</style>
