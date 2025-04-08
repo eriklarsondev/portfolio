@@ -22,7 +22,7 @@
           <NuxtLink
             :to="item.url"
             :target="!item.newTab ? '_self' : '_blank'"
-            class="menu-item relative font-heading font-normal md:text-[16vw] sm:text-[18vw] text-[24vw] text-zinc-700 hover:text-zinc-500 transition-all duration-300">
+            class="menu-item relative font-heading font-normal md:text-[16vw] sm:text-[18vw] text-[24vw] text-zinc-200 hover:text-zinc-400 transition-all duration-300">
             {{ item.label }}
           </NuxtLink>
         </li>
