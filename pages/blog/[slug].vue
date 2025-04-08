@@ -8,7 +8,7 @@
     <Container class="mb-20">
       <div class="flex lg:flex-row flex-col gap-20">
         <div class="flex-1">
-          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
+          <HTMLContent :html="data.content" :justify="true" data-aos="fade-right" :data-aos-delay="1000" />
 
           <div class="mt-20">
             <DisqusComments :identifier="`/blog/${data.slug}`" />
@@ -26,8 +26,7 @@
 </template>
 
 <script setup>
-import Prism from 'prismjs'
-import 'prismjs/themes/prism-okaidia.min.css'
+import Prism from '~/composables/usePrism'
 
 const route = useRoute()
 const published = ref({ month: null, day: null, year: null })
@@ -56,6 +55,6 @@ definePageMeta({ layout: 'basic' })
 
 <style lang="scss">
 pre {
-  @apply my-5 #{!important};
+  @apply my-8 p-6 shadow-none leading-8 bg-zinc-900 border-0 rounded-md #{!important};
 }
 </style>
