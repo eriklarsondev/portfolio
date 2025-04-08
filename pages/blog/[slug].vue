@@ -55,6 +55,6 @@ definePageMeta({ layout: 'basic' })
 
 <style lang="scss">
 pre {
-  @apply my-8 p-6 shadow-none leading-8 bg-zinc-900 border-0 rounded-md #{!important};
+  @apply my-8 p-6 shadow-none leading-8 bg-zinc-900 text-base border-0 rounded-md #{!important};
 }
 </style>
