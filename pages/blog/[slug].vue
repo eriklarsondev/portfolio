@@ -26,8 +26,6 @@
 </template>
 
 <script setup>
-import Prism from '~/composables/usePrism'
-
 const route = useRoute()
 const published = ref({ month: null, day: null, year: null })
 
@@ -39,8 +37,6 @@ onMounted(() => {
   published.value.month = date.toLocaleDateString('en-US', { month: 'long' })
   published.value.day = date.toLocaleDateString('en-US', { day: 'numeric' })
   published.value.year = date.toLocaleDateString('en-US', { year: 'numeric' })
-
-  Prism.highlightAll()
 })
 
 useSeoMeta({
@@ -52,9 +48,3 @@ useSeoMeta({
 
 definePageMeta({ layout: 'basic' })
 </script>
-
-<style lang="scss">
-pre {
-  @apply my-8 p-6 shadow-none leading-8 bg-zinc-900 text-base border-0 rounded-md #{!important};
-}
-</style>
