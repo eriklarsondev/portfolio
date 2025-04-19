@@ -30,9 +30,9 @@
 <script setup>
 const { data } = await useFetch('/api/pages/home')
 
-useSeoMeta({
+useHead({
   title: data.value && data.value.seo ? data.value.seo.title : data.value ? data.value.name : null,
-  description: data.value && data.value.seo ? data.value.seo.description : null
+  meta: [{ name: 'description', content: data.value && data.value.seo ? data.value.seo.description : null }]
 })
 </script>
 
