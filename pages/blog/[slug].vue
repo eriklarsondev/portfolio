@@ -39,11 +39,11 @@ onMounted(() => {
   published.value.year = date.toLocaleDateString('en-US', { year: 'numeric' })
 })
 
-useHead({
+useSeoMeta({
   titleTemplate: `${
     data.value && data.value.seo ? data.value.seo.title : data.value ? data.value.name : null
   } | Insights`,
-  meta: [{ name: 'description', content: data.value && data.value.seo ? data.value.seo.description : null }]
+  description: data.value && data.value.seo ? data.value.seo.description : null
 })
 
 definePageMeta({ layout: 'basic' })

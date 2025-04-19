@@ -20,6 +20,13 @@ export default defineNuxtConfig({
         },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css' }
       ],
+      meta: [
+        {
+          name: 'description',
+          content:
+            'I’m Erik, a freelance software engineer and web developer in Orlando, FL specializing in web design and app development.'
+        }
+      ],
       titleTemplate: '%s - Erik Larson',
       viewport: 'width=device-width, initial-scale=1'
     }

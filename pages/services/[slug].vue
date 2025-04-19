@@ -53,7 +53,7 @@ const scroll = ref()
 
 const { data } = await useFetch(`/api/services/${route.params.slug}`)
 
-useHead({
+useSeoMeta({
   titleTemplate: `${
     data.value && data.value.seo ? data.value.seo.title : data.value ? data.value.name : null
   } | Web Services`,
