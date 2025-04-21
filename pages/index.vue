@@ -35,9 +35,7 @@
     <Container>
       <Heading :muted="true" :cta="true" class="text-center" data-aos="flip-left">Open source collaboration</Heading>
 
-      <LinkContainer label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true">
-        <GithubRepos />
-      </LinkContainer>
+      <GithubRepos :analysis="true" />
     </Container>
   </div>
 </template>
