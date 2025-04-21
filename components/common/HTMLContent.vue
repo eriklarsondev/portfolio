@@ -1,5 +1,5 @@
 <template>
-  <div :class="['leading-9 text-[17.5px] text-zinc-300', { 'lg:text-justify': props.justify }]">
+  <div class="leading-9 font-extralight text-zinc-300">
     <div v-html="props.html"></div>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script setup>
 import Prism from '~/composables/usePrism'
 
-const props = defineProps(['html', 'justify'])
+const props = defineProps(['html'])
 
 onMounted(() => {
   const elements = document.querySelectorAll('pre')

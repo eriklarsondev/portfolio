@@ -15,7 +15,7 @@
             </template>
           </Subheading>
 
-          <HTMLContent :html="data.content" :justify="true" data-aos="fade-right" :data-aos-delay="1000" />
+          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
         </div>
 
         <div class="xl:w-[500px] lg:w-[400px] w-full">

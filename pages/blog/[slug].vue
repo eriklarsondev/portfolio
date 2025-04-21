@@ -8,7 +8,7 @@
     <Container class="mb-20">
       <div class="flex lg:flex-row flex-col gap-20">
         <div class="flex-1">
-          <HTMLContent :html="data.content" :justify="true" data-aos="fade-right" :data-aos-delay="1000" />
+          <HTMLContent :html="data.content" data-aos="fade-right" :data-aos-delay="1000" />
 
           <div class="mt-20">
             <DisqusComments :identifier="`/blog/${data.slug}`" />

@@ -27,6 +27,8 @@ const count = ref(0)
 
 onMounted(() => {
   props.data.forEach(project => {
+    if (project.language === null) project.language = 'N/A'
+
     count.value++
     if (analysis.value.hasOwnProperty(project.language)) {
       analysis.value[project.language]++

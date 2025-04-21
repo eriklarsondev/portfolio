@@ -4,7 +4,7 @@
       <div
         :class="{
           'leading-7': !props.long,
-          'lg:text-justify leading-9 text-[17.5px] text-zinc-300': props.long
+          'leading-9 font-extralight text-zinc-300': props.long
         }"
         v-html="data.content"></div>
     </div>
