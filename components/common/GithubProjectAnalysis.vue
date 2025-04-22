@@ -7,7 +7,7 @@
       :key="index"
       class="mt-5"
       data-aos="fade-left"
-      :data-aos-delay="(index + 1) * 150">
+      :data-aos-delay="(index + 1) * 100">
       <Subheading :label="`${key} (${(value / count) * 100}%)`" :muted="true" class="[&]:mb-1 [&]:text-xs" />
 
       <div class="relative h-[15px] bg-zinc-900 rounded-full">
@@ -15,6 +15,10 @@
           class="absolute top-0 left-0 h-full bg-accent rounded-full"
           :style="{ width: `${(value / count) * 100}%` }"></div>
       </div>
+    </div>
+
+    <div class="mt-8" data-aos="fade-up">
+      <HireButton label="Connect on GitHub" url="https://github.com/eriklarsondev" :tab="true" />
     </div>
   </div>
 </template>

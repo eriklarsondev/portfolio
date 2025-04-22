@@ -46,11 +46,13 @@
       <Testimonials />
     </SlantedContainer>
 
-    <Container>
-      <div ref="scroll">
-        <Heading label="Expert web services" :muted="true" :cta="true" class="text-center" data-aos="zoom-in-down" />
+    <Container class="mb-20">
+      <div class="max-w-3xl mx-auto" ref="scroll">
+        <Callout class="mb-8" data-aos="fade-right">
+          <Content slug="working-together" />
+        </Callout>
 
-        <Services />
+        <ContactForm data-aos="flip-left" />
       </div>
     </Container>
   </div>
@@ -72,4 +74,6 @@ useSeoMeta({
 function scrollTo() {
   scroll.value.scrollIntoView({ behavior: 'smooth' })
 }
+
+definePageMeta({ layout: 'basic' })
 </script>

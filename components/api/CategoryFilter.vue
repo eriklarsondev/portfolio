@@ -4,7 +4,7 @@
       <Subheading label="Filter by category" data-aos="fade-left" />
 
       <div class="flex flex-wrap gap-2">
-        <div v-for="(item, index) in data" :key="index" data-aos="zoom-in" :data-aos-delay="(index + 1) * 150">
+        <div v-for="(item, index) in data" :key="index" data-aos="zoom-in" :data-aos-delay="(index + 1) * 100">
           <NuxtLink
             :to="`/category/${item.slug}`"
             class="inline-flex items-center h-[26px] px-5 uppercase tracking-widest bg-zinc-900 hover:bg-zinc-700 font-medium text-[10px] rounded-full transition-all duration-150">

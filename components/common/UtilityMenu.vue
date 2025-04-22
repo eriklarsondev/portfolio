@@ -5,7 +5,7 @@
       :key="index"
       :class="{ 'sm:block hidden': index > 0 }"
       data-aos="fade-up"
-      :data-aos-delay="(index + 1) * 150">
+      :data-aos-delay="(index + 1) * 100">
       <Button :label="item.label" :url="item.url" :tab="item.newTab" v-if="!props.cta" />
       <CTAButton :label="item.label" :url="item.url" :tab="item.newTab" v-if="props.cta" />
     </div>

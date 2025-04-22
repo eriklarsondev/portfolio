@@ -6,7 +6,7 @@
         :key="index"
         class="bg-zinc-800/50"
         data-aos="zoom-in"
-        :data-aos-delay="(index + 1) * 150">
+        :data-aos-delay="(index + 1) * 100">
         <ListGroup :items="item.technologies" class="mb-3" />
 
         <h3 class="mb-1"><font-awesome icon="folder" class="mr-1 text-accent" /> {{ item.name }}</h3>

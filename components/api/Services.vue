@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="grid xl:grid-cols-3 grid-cols-1 gap-8 xl:max-w-full max-w-3xl mx-auto" v-if="data && data.length">
-      <div v-for="(item, index) in data" :key="index" data-aos="zoom-in" :data-aos-delay="(index + 1) * 150">
+      <div v-for="(item, index) in data" :key="index" data-aos="zoom-in" :data-aos-delay="(index + 1) * 100">
         <Card>
           <h2 class="mb-1">
             <span class="text-accent">0{{ index + 1 }}.</span> {{ item.name }}

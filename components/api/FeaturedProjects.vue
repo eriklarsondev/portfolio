@@ -5,7 +5,7 @@
         v-for="(item, index) in data"
         :key="index"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-        :data-aos-delay="(index + 1) * 150">
+        :data-aos-delay="(index + 1) * 100">
         <Project :data="item" />
       </div>
     </div>

@@ -5,7 +5,7 @@
         v-for="(item, index) in data"
         :key="index"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-        :data-aos-delay="(index + 1) * 150">
+        :data-aos-delay="(index + 1) * 100">
         <div class="tech relative p-6 bg-zinc-800/50 rounded-md">
           <div class="flex sm:flex-row flex-col gap-5">
             <div class="sm:block hidden">

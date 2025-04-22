@@ -22,7 +22,7 @@
         <div
           :class="['flex-1', { left: index % 2 === 0, right: index % 2 !== 0 }]"
           :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-          :data-aos-delay="(index + 1) * 150">
+          :data-aos-delay="(index + 1) * 100">
           <div class="flex items-center mb-1">
             <div class="flex-1">
               <h2 class="m-0">{{ item.company }}</h2>

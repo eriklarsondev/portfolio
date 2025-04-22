@@ -32,6 +32,10 @@
     <CTA slug="homepage" />
 
     <Container>
+      <Heading :muted="true" :cta="true" class="sm:text-center" data-aos="flip-left">
+        Following the<br />digital project lifecycle
+      </Heading>
+
       <Strategies />
     </Container>
 
@@ -39,7 +43,7 @@
       <Testimonials />
     </SlantedContainer>
 
-    <Container>
+    <Container class="mb-20">
       <div ref="scroll">
         <CalendlyEmbed />
       </div>
@@ -63,4 +67,6 @@ useSeoMeta({
 function scrollTo() {
   scroll.value.scrollIntoView({ behavior: 'smooth' })
 }
+
+definePageMeta({ layout: 'basic' })
 </script>
