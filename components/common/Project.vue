@@ -26,7 +26,9 @@
           {{ props.data.description ? props.data.description : '&mdash;' }}
         </span>
 
-        <Button label="Learn More" :url="`/portfolio/${props.data.slug}`" class="lg:mt-8 mt-5" />
+        <div class="lg:mt-8 mt-5" v-if="props.data.content">
+          <Button label="Learn More" :url="`/portfolio/${props.data.slug}`" />
+        </div>
       </div>
     </div>
   </div>
