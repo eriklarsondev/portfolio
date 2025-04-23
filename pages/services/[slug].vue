@@ -32,9 +32,10 @@
     <CTA slug="homepage" />
 
     <Container>
-      <Heading :muted="true" :cta="true" class="sm:text-center" data-aos="flip-left">
+      <Heading :muted="true" :cta="true" class="[&]:mb-2" data-aos="flip-left">
         Following the<br />digital project lifecycle
       </Heading>
+      <Content slug="digital-project-lifecycle" :long="true" class="[&]:mb-8" data-aos="fade-right" />
 
       <Strategies />
     </Container>

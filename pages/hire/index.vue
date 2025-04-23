@@ -3,13 +3,12 @@
     <PageHero slug="web-services" />
 
     <Container>
-      <Services />
+      <Services class="mb-40" />
 
-      <Separator />
-
-      <Heading :muted="true" :cta="true" class="sm:text-center" data-aos="flip-left">
+      <Heading :muted="true" :cta="true" class="[&]:mb-2" data-aos="flip-left">
         Following the<br />digital project lifecycle
       </Heading>
+      <Content slug="digital-project-lifecycle" :long="true" class="[&]:mb-8" data-aos="fade-right" />
 
       <Strategies />
     </Container>
@@ -23,6 +22,7 @@
     <SlantedContainer>
       <div class="max-w-3xl mx-auto">
         <Heading label="Let's work together" class="[&]:mb-1" data-aos="flip-left" />
+
         <Callout :lighten="true" class="mb-8" data-aos="fade-right">
           <Content slug="hire-me" />
         </Callout>
