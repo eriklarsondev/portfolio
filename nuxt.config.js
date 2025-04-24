@@ -78,7 +78,7 @@ export default defineNuxtConfig({
     }
   },
   site: {
-    name: 'Erik Larson | Software Engineer',
+    name: 'Erik Larson | Senior Software Engineer',
     url: 'https://elwebco.com/'
   },
   ssr: false,
