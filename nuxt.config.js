@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     name: 'Erik Larson | Senior Software Engineer',
     url: 'https://elwebco.com/'
   },
-  ssr: false,
+  ssr: true,
   tailwindcss: {
     cssPath: '~/assets/scss/main.scss'
   },
